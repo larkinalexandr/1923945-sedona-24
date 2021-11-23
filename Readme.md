@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Александр Ларькин](https://up.htmlacademy.ru/adaptive/24/user/1923945).
-* Наставник: `Неизвестно`.
+* Наставник: [Алексей Елькин](https://htmlacademy.ru/profile/alex_elkin).
 
 ---
 
