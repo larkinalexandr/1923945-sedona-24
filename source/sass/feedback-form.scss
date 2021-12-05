@@ -1,0 +1,130 @@
+.feedback-form__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feedback-form__label {
+  line-height: 26px;
+  text-transform: uppercase;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.input {
+  margin-right: 20px;
+  padding: 18px 22px 14px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  color: $black;
+  background: #f2f2f2;
+  border: none;
+  width: 100%;
+
+  &::placeholder {
+    color: $black;
+    opacity: 1;
+  }
+}
+
+.feedback-form__field {
+  display: flex;
+  align-items: center;
+}
+
+.feedback-form__contacts-wrapper .feedback-form__field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 22px;
+}
+
+.feedback-form__contacts-wrapper .input {
+  width: 222px;
+  box-sizing: border-box;
+}
+
+.feedback-form__impression-fieldset {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-left: 20px;
+  border: none;
+
+  padding: 0;
+}
+
+.feedback-form__impression-legend {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.feedback-form__sightseeing-fieldset {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-left: 20px;
+  border: none;
+  padding: 0;
+}
+
+.feedback-form__sightseeing-legend {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.feedback-form__emotion-fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.feedback-form__emotion-legend {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.feedback-form__input-textarea {
+  font-family: $main-font;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  background-color: #f2f2f2;
+  border: none;
+  resize: none;
+  padding: 13px 22px;
+  margin-bottom: 51px;
+  color: $black;
+
+  &::placeholder {
+    opacity: 1;
+  }
+}
+
+.feedback-form__button {
+  display: block;
+  width: 280px;
+  margin-bottom: 48px;
+}

@@ -1,0 +1,26 @@
+.page-footer {
+  padding-bottom: 29px;
+}
+
+.page-footer__hashtag {
+  display: block;
+  padding-top: 30px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-footer__copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.copyright__text {
+  margin-right: 20px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,73 @@
+.main-nav {
+  position: relative;
+  width: 320px;
+}
+
+.main-nav__wrapper {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  right: 20px;
+  bottom: 45px;
+  z-index: 1;
+  display: block;
+  width: 23px;
+  height: 22px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icon-menu.svg");
+  cursor: pointer;
+}
+
+.main-nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__item {
+  position: relative;
+  background-color: #81b3d2;
+  min-height: 55px;
+  text-align: center;
+  vertical-align: center;
+}
+
+.main-nav__link {
+  display: block;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.main-nav__item:not(:last-child) {
+  border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+}
+
+.main-nav__item:not(:first-child) {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  mix-blend-mode: normal;
+}
+
+.main-nav__item:last-child::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 320px;
+  height: 7px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  mix-blend-mode: normal;
+}

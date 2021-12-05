@@ -1,0 +1,27 @@
+.page-header {
+  margin: 0 auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 320px;
+    height: 56px;
+    background-color: $white;
+  }
+}
+
+.page-header__logo-link {
+  margin: 0 auto;
+  display: block;
+}
+
+.page-header__logo-image {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  z-index: 3;
+}
+

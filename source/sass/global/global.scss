@@ -1,0 +1,48 @@
+html {
+  height: 100%;
+  width: 320px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  font-family: $main-font;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #333333;
+  background-color: $white;
+  outline: 1px solid grey;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 17px;
+  padding-bottom: 15px;
+  display: block;
+  font-family: $main-font;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: $white;
+  background-color: #81b3d2;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}

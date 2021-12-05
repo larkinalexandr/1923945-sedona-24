@@ -1,0 +1,32 @@
+.index-greeting {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 37px;
+    background-image: url("../img/white-copy.svg");
+  }
+}
+
+.index-greeting__title {
+  margin: 33px 0 30px;
+  padding: 0 25px 0;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.index-greeting__text {
+  padding: 0 25px 0;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+}
+

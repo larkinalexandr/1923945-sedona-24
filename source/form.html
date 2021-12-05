@@ -2,12 +2,13 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <link href="css/style.css" rel="stylesheet">
   <title>HTML Academy: Седона - Форма обратной связи</title>
 </head>
 <body class="page__body">
 <header class="page-header">
-  <a class="page-header__logo" href="#">
-    <img src="img/logo-mobile.svg" width="102" height="84" alt="Логотип Седона.">
+  <a class="page-header__logo-link" href="#">
+    <img class="page-header__logo-image" src="img/logo-mobile.svg" width="102" height="84" alt="Логотип Седона.">
   </a>
   <nav class="main-nav">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
@@ -28,6 +29,9 @@
       </ul>
     </div>
   </nav>
+</header>
+<header class="inner-header">
+  <img class="inner-header__logo" src="img/sedona-mobile-inner.svg" width="229" height="39" alt="Седона">
 </header>
 <main class="main-feedback">
   <h1 class="main-feedback__title">Оставьте свой отзыв</h1>
@@ -53,11 +57,11 @@
       <h2 class="feedback-form__title">Контактная информация:</h2>
       <p class="feedback-form__field">
         <label class="feedback-form__label" for="phone">Контактный телефон<sup>*</sup>:</label>
-        <input class="feedback-form__input-phone" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
+        <input class="feedback-form__input-phone input" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
       </p>
       <p class="feedback-form__field">
         <label class="feedback-form__label" for="email">Электронная почта<sup>*</sup>:</label>
-        <input class="feedback-form__input-email" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+        <input class="feedback-form__input-email input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
       </p>
     </div>
     <div class="feedback-form__impression-wrapper">
@@ -82,7 +86,7 @@
     </div>
     <div class="feedback-form__sightseeing-wrapper">
       <fieldset class="feedback-form__sightseeing-fieldset">
-        <legend class="feedback-form__impression-legend">Посещенные достопримечательности:</legend>
+        <legend class="feedback-form__sightseeing-legend">Посещенные достопримечательности:</legend>
         <label class="feedback-form__label">
           <input class="feedback-form__label-checkbox" type="checkbox" name="bridge" checked>
           <span class="feedback-form__label-checkbox-checked"></span>
@@ -105,10 +109,9 @@
         </label>
       </fieldset>
       <fieldset class="feedback-form__emotion-fieldset">
-        <legend class="feedback-form__impression-legend">Опишите свои эмоции:</legend>
-        <label class="feedback-form__label visually-hidden">Опишите свои эмоции.
-          <textarea class="feedback-form__input-textarea" name="emotion"></textarea>
-        </label>
+        <legend class="feedback-form__emotion-legend">Опишите свои эмоции:</legend>
+        <label class="feedback-form__label visually-hidden" for="emotion">Опишите свои эмоции.</label>
+        <textarea class="feedback-form__input-textarea" name="emotion" id="emotion" rows="6" placeholder="Опишите подробно все свои восторги"></textarea>
       </fieldset>
     </div>
     <button class="feedback-form__button button" type="submit">отправить отзыв</button>
@@ -144,7 +147,9 @@
   <h3 class="feedback-modal-ok__title">Ваш отзыв отправлен!</h3>
   <p class="feedback-modal-ok__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы
     опубликуем его на сайте.</p>
-  <button class="feedback-modal-ok__button button" type="button">Закрыть окно</button>
+  <div class="feedback-modal-ok__button--wrapper">
+    <button class="feedback-modal-ok__button button" type="button">Закрыть окно</button>
+  </div>
 </div>
 </body>
 </html>
