@@ -1,20 +1,22 @@
 .search-hotel-index {
   text-align: center;
   text-transform: uppercase;
+  padding-top: 19px;
 }
 
 .search-hotel-index__title {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
-  color: $black;
   margin-left: 20px;
   margin-right: 20px;
-  margin-bottom: 27px;
+  margin-bottom: 21px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: $black;
 }
 
 .search-hotel-index__description {
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 27px;
+  line-height: 24px;
 }

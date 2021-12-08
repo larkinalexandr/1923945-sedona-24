@@ -5,8 +5,9 @@
 
 .main-nav__wrapper {
   position: absolute;
+  width: 100%;
   z-index: 3;
-  top: 0;
+  top: -84px;
   left: 0;
   display: none;
 }

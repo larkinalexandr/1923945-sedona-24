@@ -1,4 +1,11 @@
+.feedback-form {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .feedback-form__title {
+  padding: 0;
+  margin: 0;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -10,25 +17,26 @@
 .feedback-form__label {
   line-height: 26px;
   text-transform: uppercase;
-  padding-left: 20px;
-  padding-right: 10px;
 }
 
-.input {
-  margin-right: 20px;
-  padding: 18px 22px 14px;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 26px;
-  color: $black;
-  background: #f2f2f2;
-  border: none;
-  width: 100%;
+.feedback-form__introduce-wrapper {
+  position: relative;
+  padding-top: 20px;
+}
 
-  &::placeholder {
-    color: $black;
-    opacity: 1;
-  }
+.feedback-form__introduce-wrapper::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: -20px;
+  right: -20px;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+
+.feedback-form__introduce-wrapper .feedback-form__label {
+  padding-right: 10px;
 }
 
 .feedback-form__field {
@@ -36,26 +44,92 @@
   align-items: center;
 }
 
-.feedback-form__contacts-wrapper .feedback-form__field {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 22px;
+/*feedback-form-contacts*/
+.feedback-form__contacts-wrapper {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 28px;
+
+  & .feedback-form__field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  & .feedback-form__label {
+    margin-left: 22px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: #e5e5e5;
+  }
 }
 
 .feedback-form__contacts-wrapper .input {
-  width: 222px;
-  box-sizing: border-box;
+  width: 100%;
+}
+
+.feedback-form__input-contacts-wrapper {
+  display: flex;
+}
+
+.feedback-form__phone-icon {
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  background-image: url("../img/phone.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.feedback-form__mail-icon {
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  background-image: url("../img/mail.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+
+/*impression fieldset*/
+.feedback-form__impression-wrapper {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: #e6e6e6;
+  }
 }
 
 .feedback-form__impression-fieldset {
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
-  margin-left: 20px;
   border: none;
-
   padding: 0;
+
+  & .feedback-form__radio-value {
+    margin-left: 70px;
+  }
 }
 
 .feedback-form__impression-legend {
@@ -68,13 +142,89 @@
   margin: 0 auto;
 }
 
+.feedback-form__radio-check {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #f2f2f2;
+  border: 5px solid #f2f2f2;
+  border-radius: 50%;
+}
+
+.feedback-form__radio-input:checked + .feedback-form__radio-check::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  background-color: #333333;
+  border: 2px solid #333333;
+  border-radius: 50%;
+}
+
+.feedback-form__impression-fieldset .feedback-form__label {
+  position: relative;
+}
+
+.feedback-form__impression-fieldset .feedback-form__label:nth-of-type(1) {
+  margin-top: 37px;
+  margin-bottom: 43px;
+}
+
+.feedback-form__impression-fieldset .feedback-form__label:not(:nth-of-type(1)) {
+  margin-bottom: 43px;
+}
+
+.feedback-form__impression-fieldset .feedback-form__label:nth-last-of-type(1) {
+  margin-bottom: 41px;
+}
+
+/*sightseeing-fields*/
+.feedback-form__sightseeing-wrapper {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: #e5e5e5;
+  }
+}
+
 .feedback-form__sightseeing-fieldset {
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
-  margin-left: 20px;
   border: none;
-  padding: 0;
+}
+
+.feedback-form__sightseeing-fieldset .feedback-form__label {
+  position: relative;
+
+  &:nth-of-type(1) {
+    margin-top: 36px;
+    margin-bottom: 54px;
+  }
+
+  &:not(:nth-of-type(1)) {
+    margin-bottom: 54px;
+  }
+
+  &:nth-last-of-type(1) {
+    margin-bottom: 39px;
+  }
+}
+
+.feedback-form__checkbox-value {
+  margin-left: 70px;
 }
 
 .feedback-form__sightseeing-legend {
@@ -87,26 +237,67 @@
   margin: 0 auto;
 }
 
+.feedback-form__checkbox-check {
+  position: absolute;
+  top: -14px;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  border: 5px solid #f2f2f2;
+  border-radius: 5px;
+}
+
+.feedback-form__checkbox:checked + .feedback-form__checkbox-check {
+  position: absolute;
+  top: -14px;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  background-image: url("../img/chek-on.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+}
+
+/*emotion-field*/
+.feedback-form__emotion-wrapper {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: #e5e5e5;
+  }
+}
+
 .feedback-form__emotion-fieldset {
-  display: flex;
-  flex-direction: column;
-  border: none;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin: 0;
   padding: 0;
+  border: none;
 }
 
 .feedback-form__emotion-legend {
+  margin: 0 auto 15px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: $black;
-  text-align: center;
   text-transform: uppercase;
-  margin: 0 auto;
 }
 
-.feedback-form__input-textarea {
+.feedback-form__textarea-input {
+  padding: 13px 22px 29px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
   font-family: $main-font;
   font-size: 18px;
   line-height: 26px;
@@ -114,8 +305,6 @@
   background-color: #f2f2f2;
   border: none;
   resize: none;
-  padding: 13px 22px;
-  margin-bottom: 51px;
   color: $black;
 
   &::placeholder {
@@ -125,6 +314,6 @@
 
 .feedback-form__button {
   display: block;
-  width: 280px;
-  margin-bottom: 48px;
+  width: 100%;
+  margin: 0 auto;
 }
