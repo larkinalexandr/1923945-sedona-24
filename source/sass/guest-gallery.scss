@@ -1,0 +1,88 @@
+.guest-gallery__header-wrapper {
+  padding: 24px 20px 20px;
+}
+
+.guest-gallery__title {
+  margin: 0 0 25px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.guest-gallery__description {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.guest-gallery__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.guest-gallery__item {
+  position: relative;
+  padding: 22px 20px 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    height: 1px;
+    background-color: #e5e5e5;
+  }
+
+  &:last-child::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 1px;
+    background-color: #e5e5e5;
+  }
+}
+
+.guest-gallery__card {
+  margin: 0;
+  padding: 0;
+}
+
+.guest-gallery__image-name {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.guest-gallery__image-author {
+  display: block;
+  margin-bottom: 10px;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.guest-gallery__likes-button {
+  position: absolute;
+  width: 23px;
+  height: 21px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/like-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.guest-gallery__likes {
+  margin-left: 30px;
+  font-weight: bold;
+  line-height: 24px;
+}

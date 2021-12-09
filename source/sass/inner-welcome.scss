@@ -1,0 +1,27 @@
+.inner-welcome {
+  position: relative;
+  margin-top: -85px;
+  padding-top: 108px;
+  width: 320px;
+  min-height: 106px;
+  background-image: url("../img/back-mobile-inner.jpg");
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 320px;
+    height: 57px;
+    background-image: url("../img/intro-triangle.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.inner-welcome__logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

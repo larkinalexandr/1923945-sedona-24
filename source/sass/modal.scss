@@ -1,0 +1,63 @@
+.modal {
+  position: fixed;
+  background-color: $white;
+  z-index: 4;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.feedback-modal-error {
+  display: none;
+}
+
+.feedback-modal-ok {
+  display: none;
+}
+
+.feedback-modal-error__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feedback-modal-error__description {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feedback-modal-error__button {
+  display: block;
+  width: 180px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 35px;
+}
+
+
+.feedback-modal-ok__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feedback-modal-ok__description {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feedback-modal-ok__button--wrapper {
+  background-color: #f2f2f2;
+  min-height: 78px;
+  padding-top: 20px;
+}
+
+.feedback-modal-ok__button {
+  display: block;
+  width: 280px;
+  margin: auto;
+}
