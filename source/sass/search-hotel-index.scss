@@ -20,3 +20,14 @@
   margin-bottom: 27px;
   line-height: 24px;
 }
+
+.search-hotel-index__button {
+  @media (min-width: $mobile-width) {
+  margin: 0 auto;
+  width: 320px;
+}
+  @media (min-width: $tablet-width){
+  margin: 0 auto;
+  width: 458px;
+}
+}

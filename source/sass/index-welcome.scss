@@ -11,6 +11,10 @@
     background-image: url("../img/back-tablet.jpg");
   }
 
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/back-desktop.jpg");
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -24,6 +28,10 @@
 
     @media (min-width: $tablet-width) {
       background-image: url("../img/intro-triangle-tablet.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/intro-triangle-desktop.svg");
     }
   }
 }

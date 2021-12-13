@@ -15,9 +15,13 @@ body {
   font-weight: normal;
   color: #333333;
   background-color: $white;
-  outline: 1px dotted grey;
+
   @media (min-width: $tablet-width) {
     width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
   }
 }
 

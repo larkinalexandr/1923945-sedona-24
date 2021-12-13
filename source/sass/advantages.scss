@@ -7,16 +7,28 @@
   text-transform: uppercase;
 }
 
+.advantages__sub-list {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .advantages__item {
   text-align: center;
+
+  &--large {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
 }
 
 .advantages__item-content {
+  display: grid;
+  padding: 70px 25px 5px;
   background-color: #81b3d2;
-}
-
-.advantages__item--large:nth-child(1) .advantages__item-content {
-  padding: 70px 25px 25px;
 }
 
 .advantages__item-content .advantages__title {
@@ -31,12 +43,17 @@
 }
 
 .advantages__item-content .advantages__description {
-  margin-bottom: 13px;
+  margin: 0;
   color: $white;
 }
 
 .advantages__image {
   display: block;
+
+  @media (min-width: $tablet-width) {
+    grid-column: span 2;
+    width: 100%;
+  }
 }
 
 .advantages__title {
@@ -49,6 +66,10 @@
 
 .advantages__sub-item {
   text-align: left;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+  }
 }
 
 .advantages__sub-title {
@@ -56,15 +77,27 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 100px;
+  }
 }
 
 
 .advantages__sub-item:nth-child(1) {
   padding: 36px 20px 5px 69px;
+
+  @media (min-width: $tablet-width) {
+    padding: 9px 20px 5px;
+  }
 }
 
 .advantages__sub-item:not(:nth-child(1)) {
   padding: 9px 20px 5px 69px;
+
+  @media (min-width: $tablet-width) {
+    padding: 9px 20px 5px;
+  }
 }
 
 .advantages__sub-item:last-child {
@@ -75,18 +108,30 @@
   background-image: url("../img/icon-house.svg");
   background-repeat: no-repeat;
   background-position: 21px 26px;
+
+  @media (min-width: $tablet-width) {
+    background-position: 50% 40px;
+  }
 }
 
 .souvenirs-item {
   background-image: url("../img/icon-gift.svg");
   background-repeat: no-repeat;
   background-position: 25px -3px;
+
+  @media (min-width: $tablet-width) {
+    background-position: 50% 40px;
+  }
 }
 
 .eat-item {
   background-image: url("../img/icon-burger.svg");
   background-repeat: no-repeat;
   background-position: 18px 3px;
+
+  @media (min-width: $tablet-width) {
+    background-position: 50% 40px;
+  }
 }
 
 .advantages__item--large:nth-child(2) .advantages__item-content {
@@ -110,14 +155,28 @@
 .advantages__item:not(:last-child):not(.advantages__item--large) {
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    right: 20px;
-    left: 20px;
-    bottom: 0;
-    display: block;
-    height: 1px;
-    background-color: #d6d6d6;
+  @media (max-width: $mobile-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      right: 20px;
+      left: 20px;
+      bottom: 0;
+      display: block;
+      height: 1px;
+      background-color: #d6d6d6;
+    }
+  }
+}
+
+.advantages__list-advantages-wrapper {
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

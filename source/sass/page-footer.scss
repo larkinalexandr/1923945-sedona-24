@@ -1,5 +1,12 @@
 .page-footer {
   padding-bottom: 29px;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
 }
 
 .page-footer__hashtag {
@@ -18,6 +25,9 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .copyright__text {
