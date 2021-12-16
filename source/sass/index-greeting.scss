@@ -1,30 +1,46 @@
 .index-greeting {
   position: relative;
+  padding: 32px 18px 11px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    width: 100%;
-    height: 37px;
-    background-image: url("../img/white-copy.svg");
+  @media (max-width: $mobile-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      right: 0;
+      left: 0;
+      height: 37px;
+      background-image: url("../img/white-copy.svg");
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 44px 124px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 44px 300px 40px;
   }
 }
 
 .index-greeting__title {
-  margin: 33px 0 30px;
-  padding: 0 25px 0;
+  margin: 0 0 25px;
+  padding: 0 10px 5px;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
   text-align: center;
   color: $black;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .index-greeting__text {
-  padding: 0 25px 0;
+  margin: 0;
+  padding: 0 10px 5px;
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
