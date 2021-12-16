@@ -6,8 +6,7 @@
   padding: 30px 0 29px;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: baseline;
     padding: 0 45px 0;
     min-height: 120px;
