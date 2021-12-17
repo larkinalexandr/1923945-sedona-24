@@ -30,14 +30,15 @@
     </div>
   </nav>
 </header>
-<main class="main-feedback">
+<main class="feedback-main">
   <section class="inner-welcome">
     <h2 class="inner-welcome__title visually-hidden">Добро пожаловать в город Седона.</h2>
     <img class="inner-welcome__logo" src="img/sedona-mobile-inner.svg" width="229" height="39" alt="Седона">
   </section>
-  <h1 class="main-feedback__title">Оставьте свой отзыв</h1>
-  <p class="main-feedback__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных
-    вами достопримечательностях</p>
+  <div class="feedback-content">
+    <h1 class="feedback-content__title">Оставьте свой отзыв</h1>
+    <p class="feedback-content__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+  </div>
   <form class="feedback-form" action="https://echo.htmlacademy.ru" method="get">
     <div class="feedback-form__introduce-wrapper">
       <h2 class="feedback-form__title">Представьтесь:</h2>
@@ -64,7 +65,7 @@
         </div>
       </div>
       <div class="feedback-form__field">
-          <label class="feedback-form__label" for="email">Электронная почта<sup>*</sup>:</label>
+        <label class="feedback-form__label" for="email">Электронная почта<sup>*</sup>:</label>
         <div class="feedback-form__input-contacts-wrapper">
           <input class="feedback-form__input-email input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
           <span class="feedback-form__mail-icon"></span>
