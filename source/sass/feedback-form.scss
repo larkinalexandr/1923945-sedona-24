@@ -1,5 +1,11 @@
 .feedback-form {
   padding: 0 20px 48px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 60px 0;
+  }
 }
 
 .feedback-form__introduce-wrapper {
@@ -13,15 +19,21 @@
     margin: 0;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    left: -20px;
-    right: -20px;
-    height: 1px;
-    background-color: #e5e5e5;
+  @media (max-width: $mobile-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: -20px;
+      right: -20px;
+      height: 1px;
+      background-color: #e5e5e5;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 2;
   }
 }
 
@@ -61,15 +73,22 @@
     margin-left: 20px;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    left: -20px;
-    right: -20px;
-    height: 1px;
-    background-color: #e5e5e5;
+  @media (max-width: $mobile-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: -20px;
+      right: -20px;
+      height: 1px;
+      background-color: #e5e5e5;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+    grid-column: span 2;
   }
 }
 
@@ -106,15 +125,21 @@
   padding-top: 20px;
   padding-bottom: 30px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    left: -20px;
-    right: -20px;
-    height: 1px;
-    background-color: #e6e6e6;
+  @media (max-width: $mobile-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: -20px;
+      right: -20px;
+      height: 1px;
+      background-color: #e6e6e6;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 1;
   }
 }
 
@@ -126,7 +151,6 @@
   border: none;
 
   & .feedback-form__label {
-    //position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 13px;
@@ -175,15 +199,22 @@
   padding-top: 20px;
   padding-bottom: 30px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    left: -20px;
-    right: -20px;
-    height: 1px;
-    background-color: #e5e5e5;
+  @media (max-width: $mobile-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: -20px;
+      right: -20px;
+      height: 1px;
+      background-color: #e5e5e5;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 4;
+    grid-column: span 2;
   }
 }
 
@@ -198,14 +229,26 @@
     display: flex;
     align-items: center;
     margin-bottom: 13px;
+
+    @media (min-width: $tablet-width) {
+      &:nth-of-type(odd) {
+        padding-left: 100px;
+      }
+    }
   }
 
   & .feedback-form__checkbox-value {
     margin-left: 20px;
   }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .feedback-form__sightseeing-legend {
+
   margin-bottom: 25px;
   font-size: 18px;
   line-height: 26px;
@@ -213,6 +256,11 @@
   color: $black;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+
+    padding: 0 230px;
+  }
 }
 
 .feedback-form__checkbox-check {
@@ -244,19 +292,27 @@
   padding-top: 20px;
   padding-bottom: 40px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    left: -20px;
-    right: -20px;
-    height: 1px;
-    background-color: #e5e5e5;
+  @media (max-width: $mobile-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: -20px;
+      right: -20px;
+      height: 1px;
+      background-color: #e5e5e5;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 5;
+    grid-column: span 2;
   }
 }
 
 .feedback-form__emotion-fieldset {
+
   margin: 0;
   padding: 0;
   border: none;
@@ -296,4 +352,8 @@
   display: block;
   width: 100%;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    order: 6;
+  }
 }
