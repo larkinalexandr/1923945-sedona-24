@@ -1,65 +1,16 @@
 .feedback-form {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.feedback-form__title {
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-  color: $black;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.feedback-form__label {
-  line-height: 26px;
-  text-transform: uppercase;
+  padding: 0 20px 48px;
 }
 
 .feedback-form__introduce-wrapper {
   position: relative;
   padding-top: 20px;
-}
-
-.feedback-form__introduce-wrapper::before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  left: -20px;
-  right: -20px;
-  height: 1px;
-  background-color: #e5e5e5;
-}
-
-.feedback-form__introduce-wrapper .feedback-form__label {
-  padding-right: 10px;
-}
-
-.feedback-form__field {
-  display: flex;
-  align-items: center;
-}
-
-/*feedback-form-contacts*/
-.feedback-form__contacts-wrapper {
-  position: relative;
-  padding-top: 20px;
-  padding-bottom: 28px;
+  padding-bottom: 25px;
 
   & .feedback-form__field {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  & .feedback-form__label {
-    margin-left: 22px;
-    margin-top: 14px;
-    margin-bottom: 8px;
+    align-items: center;
+    margin: 0;
   }
 
   &::before {
@@ -74,8 +25,52 @@
   }
 }
 
-.feedback-form__contacts-wrapper .input {
-  width: 100%;
+.feedback-form__title {
+  margin: 0 0 19px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feedback-form__field + .feedback-form__field {
+  margin-top: 20px;
+}
+
+.feedback-form__label {
+  margin-right: 15px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.feedback-form__label-notes {
+  position: relative;
+  top: 3px;
+}
+
+/*feedback-form-contacts*/
+
+.feedback-form__contacts-wrapper {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 25px;
+
+  & .feedback-form__label {
+    margin-left: 20px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: #e5e5e5;
+  }
 }
 
 .feedback-form__input-contacts-wrapper {
@@ -83,6 +78,7 @@
 }
 
 .feedback-form__phone-icon {
+  display: block;
   width: 58px;
   height: 58px;
   background-color: #e6e6e6;
@@ -93,6 +89,7 @@
 }
 
 .feedback-form__mail-icon {
+  display: block;
   width: 58px;
   height: 58px;
   background-color: #e6e6e6;
@@ -102,8 +99,8 @@
   flex-shrink: 0;
 }
 
-
 /*impression fieldset*/
+
 .feedback-form__impression-wrapper {
   position: relative;
   padding-top: 20px;
@@ -124,30 +121,38 @@
 .feedback-form__impression-fieldset {
   display: flex;
   flex-direction: column;
-  border: none;
+  margin: 0;
   padding: 0;
+  border: none;
+
+  & .feedback-form__label {
+    //position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+  }
 
   & .feedback-form__radio-value {
-    margin-left: 70px;
+    margin-left: 20px;
   }
 }
 
 .feedback-form__impression-legend {
+  margin-bottom: 25px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: $black;
   text-align: center;
   text-transform: uppercase;
-  margin: 0 auto;
 }
 
 .feedback-form__radio-check {
-  position: absolute;
-  top: -15px;
-  left: 0;
+  display: grid;
+  place-content: center;
   width: 45px;
   height: 45px;
+  flex-shrink: 0;
   background-color: #f2f2f2;
   border: 5px solid #f2f2f2;
   border-radius: 50%;
@@ -155,9 +160,7 @@
 
 .feedback-form__radio-input:checked + .feedback-form__radio-check::before {
   content: "";
-  position: absolute;
-  top: 12px;
-  left: 12px;
+  display: block;
   width: 18px;
   height: 18px;
   background-color: #333333;
@@ -165,24 +168,8 @@
   border-radius: 50%;
 }
 
-.feedback-form__impression-fieldset .feedback-form__label {
-  position: relative;
-}
-
-.feedback-form__impression-fieldset .feedback-form__label:nth-of-type(1) {
-  margin-top: 37px;
-  margin-bottom: 43px;
-}
-
-.feedback-form__impression-fieldset .feedback-form__label:not(:nth-of-type(1)) {
-  margin-bottom: 43px;
-}
-
-.feedback-form__impression-fieldset .feedback-form__label:nth-last-of-type(1) {
-  margin-bottom: 41px;
-}
-
 /*sightseeing-fields*/
+
 .feedback-form__sightseeing-wrapper {
   position: relative;
   padding-top: 20px;
@@ -203,44 +190,34 @@
 .feedback-form__sightseeing-fieldset {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
   border: none;
-}
 
-.feedback-form__sightseeing-fieldset .feedback-form__label {
-  position: relative;
-
-  &:nth-of-type(1) {
-    margin-top: 36px;
-    margin-bottom: 54px;
+  & .feedback-form__label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
   }
 
-  &:not(:nth-of-type(1)) {
-    margin-bottom: 54px;
+  & .feedback-form__checkbox-value {
+    margin-left: 20px;
   }
-
-  &:nth-last-of-type(1) {
-    margin-bottom: 39px;
-  }
-}
-
-.feedback-form__checkbox-value {
-  margin-left: 70px;
 }
 
 .feedback-form__sightseeing-legend {
+  margin-bottom: 25px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: $black;
   text-align: center;
   text-transform: uppercase;
-  margin: 0 auto;
 }
 
 .feedback-form__checkbox-check {
-  position: absolute;
-  top: -14px;
-  left: 0;
+  display: block;
+  flex-shrink: 0;
   width: 46px;
   height: 46px;
   background-color: #f2f2f2;
@@ -249,9 +226,8 @@
 }
 
 .feedback-form__checkbox:checked + .feedback-form__checkbox-check {
-  position: absolute;
-  top: -14px;
-  left: 0;
+  display: block;
+  flex-shrink: 0;
   width: 46px;
   height: 46px;
   background-image: url("../img/chek-on.svg");
@@ -260,7 +236,9 @@
   border-radius: 5px;
 }
 
+
 /*emotion-field*/
+
 .feedback-form__emotion-wrapper {
   position: relative;
   padding-top: 20px;
@@ -285,11 +263,12 @@
 }
 
 .feedback-form__emotion-legend {
-  margin: 0 auto 15px;
+  margin-bottom: 15px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: $black;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -308,6 +287,7 @@
   color: $black;
 
   &::placeholder {
+    color: $black;
     opacity: 1;
   }
 }
