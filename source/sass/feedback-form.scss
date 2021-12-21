@@ -34,6 +34,7 @@
 
   @media (min-width: $tablet-width) {
     order: 2;
+    padding-left: 58px;
   }
 }
 
@@ -68,6 +69,35 @@
   position: relative;
   padding-top: 20px;
   padding-bottom: 25px;
+
+  & .feedback-form__title {
+    @media (min-width: $tablet-width) {
+      position: relative;
+      padding: 0 150px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 0;
+        height: 1px;
+        width: 123px;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        right: 0;
+        height: 1px;
+        width: 123px;
+        background-color: #dbdbdb;
+      }
+    }
+  }
 
   & .feedback-form__label {
     margin-left: 20px;
@@ -140,6 +170,17 @@
 
   @media (min-width: $tablet-width) {
     order: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 25px;
+      bottom: 30px;
+      right: 0;
+      width: 1px;
+      background-color: #dbdbdb;
+    }
   }
 }
 
@@ -248,7 +289,7 @@
 }
 
 .feedback-form__sightseeing-legend {
-
+  position: relative;
   margin-bottom: 25px;
   font-size: 18px;
   line-height: 26px;
@@ -258,8 +299,29 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    padding: 0 150px;
 
-    padding: 0 230px;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 0;
+      height: 1px;
+      width: 123px;
+      background-color: #dbdbdb;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      right: 0;
+      height: 1px;
+      width: 123px;
+      background-color: #dbdbdb;
+    }
   }
 }
 
@@ -319,6 +381,9 @@
 }
 
 .feedback-form__emotion-legend {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
   margin-bottom: 15px;
   font-size: 18px;
   line-height: 26px;
@@ -326,6 +391,32 @@
   color: $black;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 150px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 0;
+      height: 1px;
+      width: 123px;
+      background-color: #dbdbdb;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      right: 0;
+      height: 1px;
+      width: 123px;
+      background-color: #dbdbdb;
+    }
+  }
 }
 
 .feedback-form__textarea-input {
@@ -355,5 +446,18 @@
 
   @media (min-width: $tablet-width) {
     order: 6;
+  }
+}
+
+.feedback-form__required-text {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-left: auto;
+    align-self: center;
+    order: 7;
+    line-height: 26px;
+    text-transform: uppercase;
   }
 }
