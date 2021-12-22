@@ -1,3 +1,15 @@
+.guest-gallery {
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
 .guest-gallery__header-wrapper {
   padding: 24px 20px 20px;
 }
@@ -22,11 +34,19 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .guest-gallery__item {
   position: relative;
-  padding: 22px 20px 15px;
 
   &::before {
     content: "";
@@ -49,6 +69,20 @@
     height: 1px;
     background-color: #e5e5e5;
   }
+
+  @media (min-width: $tablet-width) {
+    background-color: #f2f2f2;
+
+    &:first-child {
+      grid-column: span 2;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:first-child {
+      grid-column: span 3;
+    }
+  }
 }
 
 .guest-gallery__card {
@@ -56,11 +90,34 @@
   padding: 0;
 }
 
+.guest-gallery__image {
+  width: 100%;
+  height: auto;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: -70px;
+  }
+}
+
 .guest-gallery__image-name {
   font-size: 14px;
   line-height: 24px;
   font-weight: bold;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
+}
+
+.guest-gallery__signatures-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .guest-gallery__image-author {
@@ -68,10 +125,17 @@
   margin-bottom: 10px;
   font-style: normal;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
 }
 
 .guest-gallery__likes-button {
-  position: absolute;
   width: 23px;
   height: 21px;
   border: none;
@@ -79,10 +143,26 @@
   background-image: url("../img/like-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/like-icon-light.svg");
+  }
 }
 
 .guest-gallery__likes {
   margin-left: 30px;
   font-weight: bold;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
 }
