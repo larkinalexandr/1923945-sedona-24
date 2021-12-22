@@ -6,6 +6,10 @@
     grid-template-columns: 1fr 1fr;
     padding: 0 60px 0;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 120px 0 128px;
+  }
 }
 
 .feedback-form__introduce-wrapper {
@@ -56,6 +60,12 @@
   margin-right: 15px;
   line-height: 26px;
   text-transform: uppercase;
+
+  &--hide {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
 }
 
 .feedback-form__label-notes {
@@ -97,10 +107,48 @@
         background-color: #dbdbdb;
       }
     }
+
+    @media (min-width: $desktop-width) {
+      grid-column: span 2;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 0;
+        height: 1px;
+        width: 280px;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        right: 0;
+        height: 1px;
+        width: 280px;
+        background-color: #dbdbdb;
+      }
+    }
+  }
+
+  & .feedback-form__field {
+    @media (min-width: $desktop-width) {
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
   }
 
   & .feedback-form__label {
     margin-left: 20px;
+
+    @media (min-width: $desktop-width) {
+      flex-shrink: 0;
+    }
   }
 
   @media (max-width: $mobile-width) {
@@ -119,6 +167,11 @@
   @media (min-width: $tablet-width) {
     order: 3;
     grid-column: span 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -271,10 +324,14 @@
     align-items: center;
     margin-bottom: 13px;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: 1279px) {
       &:nth-of-type(odd) {
         padding-left: 100px;
       }
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0;
     }
   }
 
@@ -286,10 +343,19 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .feedback-form__sightseeing-legend {
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
   margin-bottom: 25px;
   font-size: 18px;
   line-height: 26px;
@@ -320,6 +386,33 @@
       right: 0;
       height: 1px;
       width: 123px;
+      background-color: #dbdbdb;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: span 2;
+    padding: 0 300px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 0;
+      height: 1px;
+      width: 280px;
+      background-color: #dbdbdb;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      right: 0;
+      height: 1px;
+      width: 280px;
       background-color: #dbdbdb;
     }
   }
@@ -393,6 +486,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    grid-column: span 2;
     padding: 0 150px;
 
     &::before {
@@ -414,6 +508,30 @@
       right: 0;
       height: 1px;
       width: 123px;
+      background-color: #dbdbdb;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 0;
+      height: 1px;
+      width: 280px;
+      background-color: #dbdbdb;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      right: 0;
+      height: 1px;
+      width: 280px;
       background-color: #dbdbdb;
     }
   }
