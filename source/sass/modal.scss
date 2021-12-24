@@ -7,22 +7,37 @@
 
 .feedback-modal-error {
   display: none;
-}
+  left: 50%;
+  top: 50%;
+  width: 320px;
+  padding-top: 40px;
+  transform: translate(-50%, -50%);
 
-.feedback-modal-ok {
-  display: none;
+  @media (min-width: $tablet-width) {
+    width: 400px;
+  }
 }
 
 .feedback-modal-error__title {
+  margin: 0 0 35px 0;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: $black;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 90px;
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .feedback-modal-error__description {
+  margin: 0 0 20px 0;
+  padding: 0 45px;
+  line-height: 24px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -33,24 +48,48 @@
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    width: 272px;
+  }
 }
 
+.feedback-modal-ok {
+  display: none;
+  left: 50%;
+  top: 50%;
+  width: 320px;
+  padding-top: 40px;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet-width) {
+    width: 640px;
+  }
+}
 
 .feedback-modal-ok__title {
+  margin: 0 0 35px 0;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: $black;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    line-height: 26px;
+    font-size: 30px;
+  }
 }
 
 .feedback-modal-ok__description {
+  padding: 0 50px;
+  line-height: 24px;
   text-align: center;
   text-transform: uppercase;
 }
 
-.feedback-modal-ok__button--wrapper {
+.feedback-modal-ok__button-wrapper {
   background-color: #f2f2f2;
   min-height: 78px;
   padding-top: 20px;
@@ -60,4 +99,8 @@
   display: block;
   width: 280px;
   margin: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 458px;
+  }
 }
