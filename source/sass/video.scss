@@ -22,14 +22,28 @@
 
 .video__image {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
-.video__control-rewind-wrapper {
+.video__control {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    bottom: 75px;
+    background-color: rgb(0, 0, 0, 0.6);
+  }
+}
+
+.video__control-slidebar {
   position: absolute;
   background-color: $black;
   height: 45px;
   left: 20px;
-  bottom: 66px;
+  bottom: 48px;
   right: 20px;
   opacity: 0.6;
 
@@ -43,6 +57,20 @@
     left: 20px;
     background-color: $white;
     opacity: 0.2;
+
+    @media (min-width: $tablet-width) {
+      left: 92px;
+      right: 170px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    bottom: -2px;
+    order: 2;
+    width: 100%;
+    background-color: transparent;
+    opacity: 1;
   }
 }
 
@@ -57,19 +85,15 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-}
 
-.video__control-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 66px;
-  background-color: #f2f2f2;
-  margin: 0 20px 0;
+  @media (min-width: $tablet-width) {
+    left: 207px;
+  }
 }
 
 .video__control-replay {
   margin-left: 25px;
+  padding: 24px 0;
   width: 16px;
   height: 20px;
   background-color: transparent;
@@ -78,11 +102,18 @@
   background-position: center;
   border: none;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+    padding: 37px 0;
+    background-image: url("../img/replay-light.svg");
+  }
 }
 
 .video__control-subtitles {
   margin-left: auto;
   margin-right: 31px;
+  padding: 24px 0;
   width: 32px;
   height: 20px;
   background-color: transparent;
@@ -91,10 +122,17 @@
   background-position: center;
   border: none;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+    padding: 37px 0;
+    background-image: url("../img/subtitles-light.svg");
+  }
 }
 
 .video__control-fullscreen {
   margin-right: 23px;
+  padding: 24px 0;
   width: 20px;
   height: 20px;
   background-color: transparent;
@@ -103,4 +141,10 @@
   background-position: center;
   border: none;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    order: 4;
+    padding: 37px 0;
+    background-image: url("../img/fullscreen-light.svg");
+  }
 }

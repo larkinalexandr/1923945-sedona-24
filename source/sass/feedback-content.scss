@@ -1,0 +1,33 @@
+.feedback-content {
+  padding: 24px 20px 10px;
+
+  @media (min-width: $tablet-width) {
+    padding: 44px 165px 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 94px 380px 10px;
+  }
+}
+
+.feedback-content__title {
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.feedback-content__description {
+  line-height: 24px;
+  margin: 0;
+  padding-bottom: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
