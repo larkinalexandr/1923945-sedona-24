@@ -6,12 +6,11 @@
   position: absolute;
   top: 16px;
   right: 20px;
-  z-index: 1;
+  z-index: 4;
   display: block;
   width: 23px;
   height: 22px;
   background-color: transparent;
-  background-image: url("../img/icon-menu.svg");
   border: none;
   cursor: pointer;
 
@@ -20,12 +19,37 @@
   }
 }
 
+.main-nav--closed .main-nav__toggle {
+  background-image: url("../img/icon-menu.svg");
+}
+
+.main-nav--opened .main-nav__toggle {
+  background-image: url("../img/icon-cross.svg");
+}
+
+@media (max-width: $mobile-width) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__list {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
+  }
+}
+
 .main-nav__list {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 3;
-  display: none;
   width: 100%;
   margin: 0;
   padding: 0;
