@@ -85,6 +85,8 @@
 }
 
 .advantages__sub-item {
+  background-repeat: no-repeat;
+
   @media (max-width: $mobile-width) {
 
     text-align: left;
@@ -107,38 +109,35 @@
     padding: 120px 35px 59px;
     text-align: center;
   }
-}
 
-.housing-item {
-  background-image: url("../img/icon-house.svg");
-  background-repeat: no-repeat;
-  background-position: 21px 26px;
+  &--housing-item {
+    background-image: url("../img/icon-house.svg");
+    background-position: 21px 26px;
 
-  @media (min-width: $tablet-width) {
-    order: 1;
-    background-position: 50% 40px;
+    @media (min-width: $tablet-width) {
+      order: 1;
+      background-position: 50% 40px;
+    }
   }
-}
 
-.souvenirs-item {
-  background-image: url("../img/icon-gift.svg");
-  background-repeat: no-repeat;
-  background-position: 25px -3px;
+  &--souvenirs-item {
+    background-image: url("../img/icon-gift.svg");
+    background-position: 25px -3px;
 
-  @media (min-width: $tablet-width) {
-    order: 3;
-    background-position: 50% 40px;
+    @media (min-width: $tablet-width) {
+      order: 3;
+      background-position: 50% 40px;
+    }
   }
-}
 
-.eat-item {
-  background-image: url("../img/icon-burger.svg");
-  background-repeat: no-repeat;
-  background-position: 18px 3px;
+  &--eat-item {
+    background-image: url("../img/icon-burger.svg");
+    background-position: 18px 3px;
 
-  @media (min-width: $tablet-width) {
-    order: 2;
-    background-position: 50% 40px;
+    @media (min-width: $tablet-width) {
+      order: 2;
+      background-position: 50% 40px;
+    }
   }
 }
 
