@@ -11,7 +11,7 @@
   <a class="page-header__logo-link" href="#">
     <img class="page-header__logo-image" src="img/logo-mobile.svg" width="102" height="84" alt="Логотип Седона.">
   </a>
-  <nav class="main-nav">
+  <nav class="main-nav main-nav--closed main-nav--nojs">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list">
@@ -21,7 +21,7 @@
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="main-nav__item">
+        <li class="main-nav__item main-nav__item--current">
           <a class="main-nav__link" href="#">Форма Отзыва</a>
         </li>
         <li class="main-nav__item">
@@ -60,16 +60,14 @@
       <h2 class="feedback-form__title">Контактная информация:</h2>
       <div class="feedback-form__field">
         <label class="feedback-form__label" for="phone"><span class="feedback-form__label--hide">Контактный </span>телефон<sup class="feedback-form__label-notes">*</sup>:</label>
-        <p class="feedback-form__input-contacts-wrapper">
+        <p class="feedback-form__input-contacts-wrapper feedback-form__input-contacts-wrapper--phone">
           <input class="feedback-form__input-phone input" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
-          <span class="feedback-form__phone-icon"></span>
         </p>
       </div>
       <div class="feedback-form__field">
         <label class="feedback-form__label" for="email">Электронная почта<sup class="feedback-form__label-notes">*</sup>:</label>
-        <p class="feedback-form__input-contacts-wrapper">
+        <p class="feedback-form__input-contacts-wrapper feedback-form__input-contacts-wrapper--email">
           <input class="feedback-form__input-email input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
-          <span class="feedback-form__mail-icon"></span>
         </p>
       </div>
     </div>
@@ -179,5 +177,21 @@
     <button class="feedback-modal-ok__button button" type="button">Закрыть окно</button>
   </div>
 </div>
+<script>
+  let navMain = document.querySelector('.main-nav');
+  let navToggle = document.querySelector('.main-nav__toggle');
+
+  navMain.classList.remove('main-nav--nojs');
+
+  navToggle.addEventListener('click', function() {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  });
+</script>
 </body>
 </html>
