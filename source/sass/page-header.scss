@@ -15,4 +15,9 @@
   display: block;
   margin: 0 auto;
   z-index: 3;
+
+  @media (min-width: $desktop-width) {
+    width: 187px;
+    height: 97px;
+  }
 }
