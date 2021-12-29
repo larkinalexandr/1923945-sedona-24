@@ -69,12 +69,14 @@
   text-align: center;
   background-color: #81b3d2;
 
-  &:hover {
-    background-color: #669ec0;
-  }
+  @media (max-width: $mobile-width) {
+    &:hover {
+      background-color: #669ec0;
+    }
 
-  &:active {
-    background-color: #5496bd;
+    &:active {
+      background-color: #5496bd;
+    }
   }
 
   @media (min-width: $tablet-width) {
