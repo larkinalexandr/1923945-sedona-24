@@ -92,12 +92,6 @@
 
 .guest-gallery__image {
   display: block;
-  width: 100%;
-  height: auto;
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: -58px;
-  }
 }
 
 .guest-gallery__description-wrapper {
@@ -109,7 +103,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: rgb(0, 0, 0, 0.3);
   }
 }

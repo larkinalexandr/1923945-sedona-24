@@ -2,22 +2,27 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
   <title>HTML Academy: Седона - Галерея</title>
 </head>
 <body class="page__body">
 <header class="page-header">
   <a class="page-header__logo-link" href="#">
-    <img class="page-header__logo-image" src="img/logo-mobile.svg" width="102" height="84" alt="Логотип Седона.">
+    <picture>
+      <source media="(min-width: 1280px)" srcset="img/logotype-desktop.svg">
+      <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="102" height="84" alt="Логотип Седона.">
+    </picture>
   </a>
-  <nav class="main-nav">
+  <nav class="main-nav main-nav--closed main-nav--nojs">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
         </li>
-        <li class="main-nav__item">
+        <li class="main-nav__item  main-nav__item--current">
           <a class="main-nav__link" href="#">Фото и видео</a>
         </li>
         <li class="main-nav__item">
@@ -33,7 +38,11 @@
 <main class="gallery">
   <section class="inner-welcome">
     <h2 class="inner-welcome__title visually-hidden">Добро пожаловать в город Седона.</h2>
-    <img class="inner-welcome__logo" src="img/sedona-mobile-inner.svg" width="229" height="39" alt="Седона">
+    <picture>
+      <source media="(min-width: 1280px)" srcset="img/sedona-inner-desktop.svg">
+      <source media="(min-width: 768px)" srcset="img/sedona-inner-tablet.svg">
+      <img class="inner-welcome__logo" src="img/sedona-inner-mobile.svg" width="229" height="39" alt="Седона">
+    </picture>
   </section>
   <section class="guest-gallery">
     <div class="guest-gallery__header-wrapper">
@@ -43,10 +52,12 @@
     </div>
     <ul class="guest-gallery__list">
       <li class="guest-gallery__item">
-
         <figure class="guest-gallery__card">
-          <img class="guest-gallery__image" src="img/photo-1-mobile.jpg" width="280" height="280"
-               alt="Неродные просторы.">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+            <img class="guest-gallery__image" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Неродные просторы.">
+          </picture>
           <figcaption class="guest-gallery__description-wrapper">
             <div class="guest-gallery__copyright-wrapper">
               <h3 class="guest-gallery__image-name">Неродные просторы</h3>
@@ -62,8 +73,11 @@
       </li>
       <li class="guest-gallery__item">
         <figure class="guest-gallery__card">
-          <img class="guest-gallery__image" src="img/photo-2-mobile.jpg" width="280" height="280"
-               alt="Местная растительность.">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+            <img class="guest-gallery__image" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Местная растительность.">
+          </picture>
           <figcaption class="guest-gallery__description-wrapper">
             <div class="guest-gallery__copyright-wrapper">
               <h3 class="guest-gallery__image-name">Местная растительность</h3>
@@ -79,8 +93,11 @@
       </li>
       <li class="guest-gallery__item">
         <figure class="guest-gallery__card">
-          <img class="guest-gallery__image" src="img/photo-3-mobile.jpg" width="280" height="280"
-               alt="Дорога на север.">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+            <img class="guest-gallery__image" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Дорога на север.">
+          </picture>
           <figcaption class="guest-gallery__description-wrapper">
             <div class="guest-gallery__copyright-wrapper">
               <h3 class="guest-gallery__image-name">Дорога на север</h3>
@@ -96,7 +113,11 @@
       </li>
       <li class="guest-gallery__item">
         <figure class="guest-gallery__card">
-          <img class="guest-gallery__image" src="img/photo-4-mobile.jpg" width="280" height="280" alt="Мост дьявола.">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+            <img class="guest-gallery__image" src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Мост дьявола.">
+          </picture>
           <figcaption class="guest-gallery__description-wrapper">
             <div class="guest-gallery__copyright-wrapper">
               <h3 class="guest-gallery__image-name">Мост дьявола</h3>
@@ -118,7 +139,11 @@
     <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
       раз!</p>
     <div class="video__content">
-      <img class="video__image" src="img/video-mobile.jpg" width="320" height="201" alt="Превью видео.">
+      <picture>
+        <source media="(min-width: 1280px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+        <img class="guest-gallery__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Превью видео.">
+      </picture>
       <div class="video__control">
         <div class="video__control-slidebar">
         <button class="video__control-toggle" type="button"><span class="visually-hidden">Перемотка видео.</span></button>
@@ -168,5 +193,21 @@
     <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy.svg" width="27" height="35" alt="Логотип htmlacademy."></a>
   </div>
 </footer>
+<script>
+  let navMain = document.querySelector('.main-nav');
+  let navToggle = document.querySelector('.main-nav__toggle');
+
+  navMain.classList.remove('main-nav--nojs');
+
+  navToggle.addEventListener('click', function () {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  });
+</script>
 </body>
 </html>
