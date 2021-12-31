@@ -177,29 +177,32 @@
 
 .feedback-form__input-contacts-wrapper {
   display: flex;
+
+  &--phone::after {
+    content: "";
+    display: block;
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+    background-image: url("../img/phone.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+  }
+
+  &--email::after {
+    content: "";
+    display: block;
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+    background-image: url("../img/mail.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+  }
 }
 
-.feedback-form__phone-icon {
-  display: block;
-  width: 58px;
-  height: 58px;
-  background-color: #e6e6e6;
-  background-image: url("../img/phone.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  flex-shrink: 0;
-}
-
-.feedback-form__mail-icon {
-  display: block;
-  width: 58px;
-  height: 58px;
-  background-color: #e6e6e6;
-  background-image: url("../img/mail.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  flex-shrink: 0;
-}
 
 /*impression fieldset*/
 

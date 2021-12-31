@@ -104,9 +104,9 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
+    width: 100%;
     bottom: 0;
     left: 0;
-    width: 100%;
     background-color: rgb(0, 0, 0, 0.3);
   }
 }
