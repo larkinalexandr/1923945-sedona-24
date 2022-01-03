@@ -25,7 +25,6 @@
 }
 
 .page-footer__social {
-  //margin: 33px 0 57px;
   padding: 0 5px;
 }
 
@@ -35,20 +34,32 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-}
-
-.page-footer__social-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 46px;
-  height: 48px;
-  background-color: #81b3d2;
+  list-style-type: none;
 }
 
 .page-footer__social-item + .page-footer__social-item {
   margin-left: 6px;
   margin-bottom: 6px;
+}
+
+.page-footer__social-link {
+  display: grid;
+  place-content: center;
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+
+    & .social__link-icon {
+      opacity: 0.3;
+    }
+  }
 }
 
 .social__link-icon {
