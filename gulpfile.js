@@ -10,6 +10,7 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgmin from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
 
 // Styles
 
@@ -68,10 +69,21 @@ export const createWebp = () => {
 
 //SVG
 
-export const svg = () =>
-  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+export const svg = () => {
+  return gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
     .pipe(svgmin())
     .pipe(gulp.dest('build/img'));
+}
+
+export const sprite = () => {
+  return gulp.src('source/img/icons/*.svg')
+    .pipe(svgmin())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+}
 
 // Server
 
