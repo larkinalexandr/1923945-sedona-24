@@ -6,6 +6,7 @@ import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
+import htmlmin from 'gulp-htmlmin';
 
 // Styles
 
@@ -20,6 +21,14 @@ export const styles = () => {
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+//HTML
+
+export const minify = () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
 }
 
 // Server
