@@ -42,7 +42,7 @@ export const minscripts = () => {
     .pipe(gulp.dest('build/js'))
 }
 
-// Images IMG/PNG
+// Images img/png
 
 export const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
@@ -52,6 +52,16 @@ export const optimizeImages = () => {
 
 export const copyImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(gulp.dest('build/img'))
+}
+
+// Images WebP
+
+export const createWebp = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(squoosh({
+      webp: {}
+    }))
     .pipe(gulp.dest('build/img'))
 }
 
