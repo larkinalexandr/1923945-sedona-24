@@ -85,6 +85,20 @@ export const sprite = () => {
     .pipe(gulp.dest('build/img'));
 }
 
+// Copy fonts & favicon
+
+export const copy = (done) => {
+  gulp.src([
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+  ], {
+    base: 'source'
+  })
+    .pipe(gulp.dest('build'))
+  done();
+}
+
+
 // Server
 
 const server = (done) => {
