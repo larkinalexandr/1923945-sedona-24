@@ -7,6 +7,7 @@ import browser from 'browser-sync';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
 
 // Styles
 
@@ -29,6 +30,15 @@ export const minify = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
+}
+
+// Scripts
+
+export const minscripts = () => {
+  return gulp.src('source/js/script.js')
+    .pipe(terser())
+    .pipe(rename('script.min.js'))
+    .pipe(gulp.dest('build/js'))
 }
 
 // Server
