@@ -11,6 +11,7 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgmin from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
+import del from 'del';
 
 // Styles
 
@@ -97,6 +98,12 @@ export const copy = (done) => {
     .pipe(gulp.dest('build'))
   done();
 }
+
+// Clean
+
+export const clean = () => {
+  return del('build');
+};
 
 
 // Server
