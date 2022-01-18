@@ -43,6 +43,7 @@ const minscripts = () => {
     .pipe(terser())
     .pipe(rename('script.min.js'))
     .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream());
 }
 
 // Images img/png
