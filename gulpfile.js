@@ -8,6 +8,7 @@ import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh'
 
 // Styles
 
@@ -39,6 +40,14 @@ export const minscripts = () => {
     .pipe(terser())
     .pipe(rename('script.min.js'))
     .pipe(gulp.dest('build/js'))
+}
+
+// Images IMG/PNG
+
+export const optimizeImages = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'))
 }
 
 // Server
