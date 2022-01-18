@@ -4,6 +4,7 @@ import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+import csso from 'postcss-csso';
 
 // Styles
 
@@ -12,7 +13,8 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
