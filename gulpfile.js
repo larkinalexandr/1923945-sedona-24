@@ -8,7 +8,8 @@ import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
-import squoosh from 'gulp-libsquoosh'
+import squoosh from 'gulp-libsquoosh';
+import svgmin from 'gulp-svgmin';
 
 // Styles
 
@@ -64,6 +65,13 @@ export const createWebp = () => {
     }))
     .pipe(gulp.dest('build/img'))
 }
+
+//SVG
+
+export const svg = () =>
+  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+    .pipe(svgmin())
+    .pipe(gulp.dest('build/img'));
 
 // Server
 
