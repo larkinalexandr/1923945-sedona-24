@@ -83,6 +83,22 @@ body {
     color: $black;
     opacity: 1;
   }
+
+  &:hover {
+    background: #e5e5e5;
+  }
+
+  &:active {
+    background: $white;
+    outline: 4px solid #e5e5e5;
+    outline-offset: -4px;
+  }
+
+  &:focus {
+    background: $white;
+    outline: 4px solid #e5e5e5;
+    outline-offset: -4px;
+  }
 }
 
 img {
