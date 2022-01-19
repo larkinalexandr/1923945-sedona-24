@@ -73,13 +73,19 @@ const createWebp = () => {
 
 const svg = () => {
   return gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
-    .pipe(svgmin())
+    .pipe(svgmin( {
+      plugins :  [ {
+        removeViewBox :  false
+      } ]}))
     .pipe(gulp.dest('build/img'));
 }
 
 const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
-    .pipe(svgmin())
+    .pipe(svgmin( {
+    plugins :  [ {
+      removeViewBox :  false
+    } ]}))
     .pipe(svgstore({
       inlineSvg: true
     }))
