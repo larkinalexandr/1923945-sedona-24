@@ -445,6 +445,17 @@
   background-color: #f2f2f2;
   border: 5px solid #f2f2f2;
   border-radius: 5px;
+
+  &:hover {
+    background-color: #e5e5e5;
+    border: 5px solid #e5e5e5;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: #d5d5d5;
+    border: 5px solid #d5d5d5;
+  }
 }
 
 .feedback-form__checkbox:checked + .feedback-form__checkbox-check {
@@ -456,6 +467,10 @@
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 5px;
+}
+
+.feedback-form__checkbox:checked:active + .feedback-form__checkbox-check {
+  opacity: 0.3;
 }
 
 
