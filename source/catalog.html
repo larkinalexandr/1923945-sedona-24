@@ -18,7 +18,14 @@
     </picture>
   </a>
   <nav class="main-nav main-nav--closed main-nav--nojs">
-    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
+    <button class="main-nav__toggle" type="button">
+      <svg class="main-nav__toggle-burger" width="23" height="22">
+        <use xlink:href="img/sprite.svg#icon-menu"></use>
+      </svg>
+      <svg class="main-nav__toggle-cross" width="23" height="22">
+        <use xlink:href="img/sprite.svg#icon-cross"></use>
+      </svg>
+      <span class="visually-hidden">Открыть меню.</span></button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list">
         <li class="main-nav__item">
@@ -207,7 +214,12 @@
   </div>
   <div class="page-footer__copyright copyright">
     <span class="copyright__text">Разработано</span>
-    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy.svg" width="27" height="35" alt="Логотип htmlacademy."></a>
+    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      <svg class="copyright__logo-image" width="27" height="35">
+        <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+      </svg>
+      <span class="visually-hidden">Логотип htmlacademy.</span>
+    </a>
   </div>
 </footer>
 <script>
