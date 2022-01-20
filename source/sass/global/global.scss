@@ -15,8 +15,6 @@ body {
   font-weight: normal;
   color: #333333;
   background-color: $white;
-  outline: 1px dotted #000000;
-  outline-offset: -1px;
 
   @media (min-width: $tablet-width) {
     width: 768px;

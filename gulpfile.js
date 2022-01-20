@@ -62,7 +62,7 @@ const copyImages = () => {
 // Images WebP
 
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/background/*'])
     .pipe(squoosh({
       webp: {}
     }))
@@ -72,7 +72,7 @@ const createWebp = () => {
 //SVG
 
 const svg = () => {
-  return gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+  return gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
     .pipe(svgmin( {
       plugins :  [ {
         removeViewBox :  false
