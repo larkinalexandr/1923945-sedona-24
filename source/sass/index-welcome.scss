@@ -1,7 +1,7 @@
 .index-welcome {
   position: relative;
   min-height: 299px;
-  padding-top: 55px;
+  padding-top: 90px;
   background-image: url("../img/background/back-home-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,7 +26,6 @@
     }
   }
 
-
   &::after {
     content: "";
     position: absolute;
@@ -50,6 +49,8 @@
 
 .index-welcome__logo {
   display: block;
+  width: 282px;
+  height: 214px;
   margin: 0 auto;
   padding-bottom: 35px;
 

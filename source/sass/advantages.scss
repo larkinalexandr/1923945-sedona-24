@@ -16,7 +16,7 @@
 }
 
 .advantages__item--large .advantages__item-content {
-  padding: 55px 19px 39px;
+  padding: 55px 19px 28px;
   background-color: #81b3d2;
 
   @media (min-width: $tablet-width) {
@@ -39,7 +39,7 @@
 
 .advantages__item-content .advantages__title {
   margin: 0 0 10px;
-  font-size: 21px;
+  font-size: 18px;
   line-height: 26px;
   font-weight: bold;
   color: $white;
@@ -101,11 +101,11 @@
     }
 
     &:not(:nth-child(1)) {
-      padding-top: 10px;
+      padding-top: 21px;
     }
 
     &:last-child {
-      padding-bottom: 22px;
+      padding-bottom: 30px;
     }
   }
 
@@ -126,7 +126,7 @@
 
   &--souvenirs-item {
     background-image: url("../img/icon-gift.svg");
-    background-position: 25px -3px;
+    background-position: 25px 10px;
 
     @media (min-width: $tablet-width) {
       order: 3;
@@ -136,7 +136,7 @@
 
   &--eat-item {
     background-image: url("../img/icon-burger.svg");
-    background-position: 18px 3px;
+    background-position: 18px 16px;
 
     @media (min-width: $tablet-width) {
       order: 2;
@@ -146,7 +146,7 @@
 }
 
 .advantages__sub-title {
-  margin: 0 0 10px;
+  margin: 0 0 16px;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -156,11 +156,12 @@
 .advantages__sub-description {
   margin: 0;
   text-transform: uppercase;
+  padding-right: 20px;
   padding-bottom: 5px;
 }
 
 .advantages__sub-item-wrapper:last-child .advantages__sub-item {
-  padding: 25px 54px 20px;
+  padding: 25px 32px 20px;
   background-color: #eeeeee;
   text-align: center;
 
@@ -205,5 +206,10 @@
 
 .advantages__sub-item-wrapper:last-child .advantages__sub-number {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 19px;
+}
+
+
+.advantages__sub-item-wrapper:last-child .advantages__sub-description {
+  padding-right: 0;
 }
