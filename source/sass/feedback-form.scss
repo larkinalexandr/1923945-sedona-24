@@ -277,6 +277,17 @@
   background-color: #f2f2f2;
   border: 5px solid #f2f2f2;
   border-radius: 50%;
+
+  &:hover {
+    background-color: #e5e5e5;
+    border: 5px solid #e5e5e5;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: #d5d5d5;
+    border: 5px solid #d5d5d5;
+  }
 }
 
 .feedback-form__radio-input:checked + .feedback-form__radio-check::before {
@@ -288,6 +299,11 @@
   border: 2px solid #333333;
   border-radius: 50%;
 }
+
+.feedback-form__radio-input:checked:active + .feedback-form__radio-check::before {
+  opacity: 0.3;
+}
+
 
 /*sightseeing-fields*/
 
@@ -429,6 +445,17 @@
   background-color: #f2f2f2;
   border: 5px solid #f2f2f2;
   border-radius: 5px;
+
+  &:hover {
+    background-color: #e5e5e5;
+    border: 5px solid #e5e5e5;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: #d5d5d5;
+    border: 5px solid #d5d5d5;
+  }
 }
 
 .feedback-form__checkbox:checked + .feedback-form__checkbox-check {
@@ -440,6 +467,10 @@
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 5px;
+}
+
+.feedback-form__checkbox:checked:active + .feedback-form__checkbox-check {
+  opacity: 0.3;
 }
 
 
@@ -557,6 +588,22 @@
   &::placeholder {
     color: $black;
     opacity: 1;
+  }
+
+  &:hover {
+    background: #e5e5e5;
+  }
+
+  &:active {
+    background: $white;
+    outline: 4px solid #e5e5e5;
+    outline-offset: -4px;
+  }
+
+  &:focus {
+    background: $white;
+    outline: 4px solid #e5e5e5;
+    outline-offset: -4px;
   }
 }
 

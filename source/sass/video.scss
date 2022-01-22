@@ -29,11 +29,12 @@
 .video__control {
   display: flex;
   align-items: center;
+  height: 66px;
   background-color: #f2f2f2;
 
   @media (min-width: $tablet-width) {
     position: relative;
-    bottom: 75px;
+    bottom: 66px;
     background-color: rgb(0, 0, 0, 0.6);
   }
 }
@@ -43,7 +44,7 @@
   background-color: $black;
   height: 45px;
   left: 20px;
-  bottom: 48px;
+  bottom: 66px;
   right: 20px;
   opacity: 0.6;
 
@@ -91,60 +92,61 @@
   }
 }
 
-.video__control-replay {
-  margin-left: 25px;
-  padding: 24px 0;
-  width: 16px;
-  height: 20px;
+.video__control-button {
+  display: grid;
+  place-content: center;
   background-color: transparent;
-  background-image: url("../img/replay.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   border: none;
   cursor: pointer;
 
-  @media (min-width: $tablet-width) {
-    order: 1;
-    padding: 37px 0;
-    background-image: url("../img/replay-light.svg");
+  &--replay {
+    margin-left: 25px;
+
+    @media (min-width: $tablet-width) {
+      order: 1;
+    }
+  }
+
+  &--subtitles {
+    margin-left: auto;
+    margin-right: 31px;
+
+    @media (min-width: $tablet-width) {
+      order: 3;
+    }
+  }
+
+  &--fullscreen {
+    margin-right: 23px;
+
+    @media (min-width: $tablet-width) {
+      order: 4;
+    }
   }
 }
 
-.video__control-subtitles {
-  margin-left: auto;
-  margin-right: 31px;
-  padding: 24px 0;
-  width: 32px;
-  height: 20px;
-  background-color: transparent;
-  background-image: url("../img/subtitles.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
-  cursor: pointer;
+.video__control-icon {
+  fill: #5c6870;
 
-  @media (min-width: $tablet-width) {
-    order: 3;
-    padding: 37px 0;
-    background-image: url("../img/subtitles-light.svg");
+  &:hover {
+    fill: #333333;
   }
-}
 
-.video__control-fullscreen {
-  margin-right: 23px;
-  padding: 24px 0;
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  background-image: url("../img/fullscreen.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
-  cursor: pointer;
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
-    order: 4;
-    padding: 37px 0;
-    background-image: url("../img/fullscreen-light.svg");
+    fill: $white;
+
+    &:hover {
+      fill: $white;
+      opacity: 0.6;
+    }
+
+    &:active {
+      fill: $white;
+      opacity: 0.3;
+    }
   }
 }

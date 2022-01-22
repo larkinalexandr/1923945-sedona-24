@@ -5,7 +5,7 @@
 .main-nav__toggle {
   position: absolute;
   top: 16px;
-  right: 20px;
+  right: 24px;
   z-index: 4;
   display: block;
   width: 23px;
@@ -19,12 +19,38 @@
   }
 }
 
-.main-nav--closed .main-nav__toggle {
-  background-image: url("../img/icon-menu.svg");
+.main-nav--closed .main-nav__toggle-burger {
+  display: block;
+  fill: #81b3d2;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.main-nav--opened .main-nav__toggle {
-  background-image: url("../img/icon-cross.svg");
+.main-nav--closed .main-nav__toggle-cross {
+  display: none;
+}
+
+.main-nav--opened .main-nav__toggle-burger {
+  display: none;
+}
+
+.main-nav--opened .main-nav__toggle-cross {
+  display: block;
+  fill: $white;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (max-width: $mobile-width) {
