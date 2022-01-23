@@ -14,7 +14,7 @@
 
 .feedback-form__introduce-wrapper {
   position: relative;
-  padding-top: 20px;
+  padding-top: 21px;
   padding-bottom: 25px;
 
   & .feedback-form__field {
@@ -52,8 +52,13 @@
   text-transform: uppercase;
 }
 
-.feedback-form__field + .feedback-form__field {
+.feedback-form__field--introduce + .feedback-form__field--introduce {
   margin-top: 20px;
+}
+
+.feedback-form__label-wrapper {
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .feedback-form__label {
@@ -77,10 +82,12 @@
 
 .feedback-form__contacts-wrapper {
   position: relative;
-  padding-top: 20px;
+  padding-top: 21px;
   padding-bottom: 25px;
 
   & .feedback-form__title {
+    margin-bottom: 10px;
+
     @media (min-width: $tablet-width) {
       position: relative;
       padding: 0 150px;

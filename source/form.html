@@ -9,6 +9,7 @@
   <title>HTML Academy: Седона - Форма обратной связи</title>
 </head>
 <body class="page__body">
+<div class="page-container">
 <header class="page-header">
   <a class="page-header__logo-link" href="#">
     <picture>
@@ -60,15 +61,15 @@
   <form class="feedback-form" action="https://echo.htmlacademy.ru" method="get">
     <div class="feedback-form__introduce-wrapper">
       <h2 class="feedback-form__title">Представьтесь:</h2>
-      <p class="feedback-form__field">
+      <p class="feedback-form__field feedback-form__field--introduce">
         <label class="feedback-form__label" for="name">Имя<sup class="feedback-form__label-notes">*</sup>:</label>
         <input class="feedback-form__input-name input" type="text" name="name" id="name" placeholder="Петр" required>
       </p>
-      <p class="feedback-form__field">
+      <p class="feedback-form__field feedback-form__field--introduce">
         <label class="feedback-form__label" for="surname">Фамилия<sup class="feedback-form__label-notes">*</sup>:</label>
         <input class="feedback-form__input-surname input" type="text" name="surname" id="surname" placeholder="Иванов" required>
       </p>
-      <p class="feedback-form__field">
+      <p class="feedback-form__field feedback-form__field--introduce">
         <label class="feedback-form__label" for="patronymic">Отчество:</label>
         <input class="feedback-form__input-patronymic input" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
       </p>
@@ -76,14 +77,16 @@
     <div class="feedback-form__contacts-wrapper">
       <h2 class="feedback-form__title">Контактная информация:</h2>
       <div class="feedback-form__field">
-        <label class="feedback-form__label" for="phone"><span class="feedback-form__label--hide">Контактный </span>телефон<sup class="feedback-form__label-notes">*</sup>:
+        <label class="feedback-form__label" for="phone">
+          <span class="feedback-form__label-wrapper"><span class="feedback-form__label--hide">Контактный </span>телефон<sup class="feedback-form__label-notes">*</sup>:</span>
         <span class="feedback-form__input-contacts-wrapper feedback-form__input-contacts-wrapper--phone">
           <input class="feedback-form__input-phone input" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
         </span>
         </label>
       </div>
       <div class="feedback-form__field">
-        <label class="feedback-form__label" for="email">Электронная почта<sup class="feedback-form__label-notes">*</sup>:
+        <label class="feedback-form__label" for="email">
+          <span class="feedback-form__label-wrapper">Электронная почта<sup class="feedback-form__label-notes">*</sup>:</span>
         <span class="feedback-form__input-contacts-wrapper feedback-form__input-contacts-wrapper--email">
           <input class="feedback-form__input-email input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
         </span>
@@ -215,5 +218,6 @@
     }
   });
 </script>
+</div>
 </body>
 </html>

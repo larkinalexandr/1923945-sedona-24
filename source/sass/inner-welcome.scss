@@ -1,10 +1,11 @@
 .inner-welcome {
   position: relative;
   padding-top: 52px;
-  min-height: 106px;
+  min-height: 107px;
   background-image: url("../img/background/back-inner-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 0 -56px;
+  background-size: 100%;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/background/back-inner-mobile@2x.jpg");
