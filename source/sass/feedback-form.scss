@@ -8,7 +8,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 120px 0 128px;
+    padding: 0 121px 72px 120px;
   }
 }
 
@@ -35,6 +35,11 @@
     padding-left: 58px;
     padding-top: 59px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 41px;
+    padding-left: 80px;
+  }
 }
 
 .feedback-form__introduce-wrapper .feedback-form__field {
@@ -45,6 +50,10 @@
 
 .feedback-form__introduce-wrapper .feedback-form__label {
   margin-right: 15px;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 16px;
+  }
 }
 
 .feedback-form__title {
@@ -130,12 +139,15 @@
 
     @media (min-width: $desktop-width) {
       grid-column: span 2;
+      margin-bottom: 72px;
+      padding-right: 280px;
+      padding-left: 274px;
 
       &::before {
         content: "";
         position: absolute;
         display: block;
-        top: 50%;
+        top: 40%;
         left: 0;
         height: 1px;
         width: 280px;
@@ -146,7 +158,7 @@
         content: "";
         position: absolute;
         display: block;
-        top: 50%;
+        top: 40%;
         right: 0;
         height: 1px;
         width: 280px;
@@ -168,6 +180,7 @@
 
     @media (min-width: $desktop-width) {
       flex-shrink: 0;
+      margin-left: 0;
     }
   }
 
@@ -193,6 +206,14 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 35px;
+  }
+}
+
+.feedback-form__contacts-wrapper .feedback-form__label {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -204,10 +225,34 @@
   }
 }
 
+.feedback-form__field--phone .feedback-form__label-wrapper {
+
+  @media (min-width: $desktop-width) {
+    margin-right: 14px;
+  }
+}
+
 .feedback-form__field--email .feedback-form__label-wrapper {
   margin-bottom: 5px;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 17px;
+  }
+}
+
+.feedback-form__input-phone {
+  @media (min-width: $desktop-width) {
+    width: 258px;
+  }
+}
+
+.feedback-form__input-email {
+  @media (min-width: $desktop-width) {
+    width: 258px;
   }
 }
 
@@ -275,6 +320,10 @@
       background-color: #dbdbdb;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 41px;
+  }
 }
 
 .feedback-form__impression-fieldset {
@@ -304,6 +353,10 @@
       margin-left: 20px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 4px;
+  }
 }
 
 .feedback-form__impression-legend {
@@ -318,7 +371,10 @@
   @media (min-width: $tablet-width) {
     font-size: 21px;
     margin: 0 0 57px 0;
+  }
 
+  @media (min-width: $desktop-width) {
+    margin: 0 0 57px 76px;
   }
 }
 
@@ -420,6 +476,10 @@
 
     @media (min-width: $tablet-width) {
       margin-left: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 28;
     }
   }
 
@@ -567,6 +627,10 @@
     padding-top: 37px;
     padding-bottom: 52px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 43px;
+  }
 }
 
 .feedback-form__emotion-fieldset {
@@ -619,6 +683,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 54px;
     &::before {
       content: "";
       position: absolute;
@@ -683,6 +748,11 @@
     padding-left: 21px;
     padding-top: 18px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 21px;
+    padding-top: 18px;
+  }
 }
 
 .feedback-form__button {
@@ -692,6 +762,10 @@
   @media (min-width: $tablet-width) {
     order: 6;
     padding-right: 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
   }
 }
 
