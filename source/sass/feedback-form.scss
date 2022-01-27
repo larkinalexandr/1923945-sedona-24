@@ -4,7 +4,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 60px 0;
+    padding: 10px 60px 66px;
   }
 
   @media (min-width: $desktop-width) {
@@ -33,6 +33,7 @@
   @media (min-width: $tablet-width) {
     order: 2;
     padding-left: 58px;
+    padding-top: 59px;
   }
 }
 
@@ -54,6 +55,12 @@
   color: $black;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+    font-size: 21px;
+    text-align: left;
+  }
 }
 
 .feedback-form__field--introduce + .feedback-form__field--introduce {
@@ -94,13 +101,15 @@
 
     @media (min-width: $tablet-width) {
       position: relative;
-      padding: 0 150px;
+      padding: 0 137px;
+      text-align: center;
+      margin-bottom: 14px;
 
       &::before {
         content: "";
         position: absolute;
         display: block;
-        top: 50%;
+        top: 35%;
         left: 0;
         height: 1px;
         width: 123px;
@@ -111,7 +120,7 @@
         content: "";
         position: absolute;
         display: block;
-        top: 50%;
+        top: 35%;
         right: 0;
         height: 1px;
         width: 123px;
@@ -178,6 +187,7 @@
   @media (min-width: $tablet-width) {
     order: 3;
     grid-column: span 2;
+    padding-top: 37px;
   }
 
   @media (min-width: $desktop-width) {
@@ -188,10 +198,17 @@
 
 .feedback-form__field--phone {
   margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 21px;
+  }
 }
 
 .feedback-form__field--email .feedback-form__label-wrapper {
   margin-bottom: 5px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 6px;
+  }
 }
 
 .feedback-form__input-contacts-wrapper {
@@ -245,6 +262,7 @@
 
   @media (min-width: $tablet-width) {
     order: 1;
+    padding-top: 60px;
 
     &::after {
       content: "";
@@ -270,6 +288,10 @@
     display: flex;
     align-items: center;
     margin-bottom: 14px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 23px;
+    }
   }
 
   & .feedback-form__radio-value {
@@ -277,17 +299,27 @@
     font-size: 18px;
     font-weight: bold;
     text-transform: none;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 20px;
+    }
   }
 }
 
 .feedback-form__impression-legend {
-  margin-bottom: 22px;
+  margin: 0 auto 22px auto;
+  padding: 0;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: $black;
-  text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    margin: 0 0 57px 0;
+
+  }
 }
 
 .feedback-form__radio-check {
@@ -350,6 +382,7 @@
   @media (min-width: $tablet-width) {
     order: 4;
     grid-column: span 2;
+    padding-top: 24px;
   }
 }
 
@@ -366,8 +399,11 @@
     margin-bottom: 24px;
 
     @media (min-width: $tablet-width) and (max-width: 1279px) {
+      margin-bottom: 32px;
+     padding-left: 31px;
+
       &:nth-of-type(odd) {
-        padding-left: 100px;
+        padding-left: 95px;
       }
     }
 
@@ -381,6 +417,10 @@
     font-size: 18px;
     font-weight: bold;
     text-transform: none;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 24px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -400,7 +440,7 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -409,7 +449,9 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 44px;
     padding: 0 150px;
+    font-size: 21px;
 
     &::before {
       content: "";
@@ -522,6 +564,8 @@
   @media (min-width: $tablet-width) {
     order: 5;
     grid-column: span 2;
+    padding-top: 37px;
+    padding-bottom: 52px;
   }
 }
 
@@ -536,7 +580,7 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 15px;
+  margin: 0 auto 15px auto;
   padding: 0 10px 0 12px;
   font-size: 18px;
   line-height: 26px;
@@ -548,12 +592,14 @@
   @media (min-width: $tablet-width) {
     grid-column: span 2;
     padding: 0 150px;
+    font-size: 21px;
+    margin-bottom: 54px;
 
     &::before {
       content: "";
       position: absolute;
       display: block;
-      top: 50%;
+      top: 32%;
       left: 0;
       height: 1px;
       width: 123px;
@@ -564,7 +610,7 @@
       content: "";
       position: absolute;
       display: block;
-      top: 50%;
+      top: 32%;
       right: 0;
       height: 1px;
       width: 123px;
@@ -632,15 +678,20 @@
     outline: 4px solid #e5e5e5;
     outline-offset: -4px;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 21px;
+    padding-top: 18px;
+  }
 }
 
 .feedback-form__button {
-  display: block;
   width: 100%;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     order: 6;
+    padding-right: 11px;
   }
 }
 
@@ -649,6 +700,7 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    margin-top: 5px;
     margin-left: auto;
     align-self: center;
     order: 7;
