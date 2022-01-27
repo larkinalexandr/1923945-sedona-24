@@ -12,7 +12,13 @@
     padding-right: 55px;
     padding-bottom: 0;
     padding-left: 55px;
-    min-height: 120px;
+    min-height: 116px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 115px;
+    padding-left: 114px;
+    min-height: 114px;
   }
 }
 
@@ -37,7 +43,7 @@
   padding: 0 5px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 3px;
+    margin-bottom: 0;
     margin-right: 7px;
 
   }
@@ -86,10 +92,6 @@
   align-items: center;
   justify-content: center;
   padding: 0 5px;
-
-  @media (min-width: $tablet-width) {
-  margin-bottom: 4px;
-  }
 }
 
 .copyright__text {

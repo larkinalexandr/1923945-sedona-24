@@ -128,8 +128,15 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 238px;
+
+    &:nth-child(4n-3) {
+      margin-left: 0px;
+    }
+
     &:nth-child(4n-2) {
-      margin-right: 240px;
+      margin-right: 244px;
+      margin-left: 1px;
     }
   }
 }
