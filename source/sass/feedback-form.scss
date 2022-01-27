@@ -1,5 +1,5 @@
 .feedback-form {
-  padding: 0 20px 48px;
+  padding: 0 20px 43px;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -16,12 +16,6 @@
   position: relative;
   padding-top: 21px;
   padding-bottom: 25px;
-
-  & .feedback-form__field {
-    display: flex;
-    align-items: center;
-    margin: 0;
-  }
 
   @media (max-width: $mobile-width) {
     &::before {
@@ -42,6 +36,16 @@
   }
 }
 
+.feedback-form__introduce-wrapper .feedback-form__field {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.feedback-form__introduce-wrapper .feedback-form__label {
+  margin-right: 15px;
+}
+
 .feedback-form__title {
   margin: 0 0 19px;
   font-size: 18px;
@@ -58,11 +62,11 @@
 
 .feedback-form__label-wrapper {
   display: inline-block;
-  margin-bottom: 10px;
+  padding-left: 2px;
+  margin-bottom: 8px;
 }
 
 .feedback-form__label {
-  margin-right: 15px;
   line-height: 26px;
   text-transform: uppercase;
 
@@ -83,10 +87,10 @@
 .feedback-form__contacts-wrapper {
   position: relative;
   padding-top: 21px;
-  padding-bottom: 25px;
+  padding-bottom: 28px;
 
   & .feedback-form__title {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 
     @media (min-width: $tablet-width) {
       position: relative;
@@ -182,6 +186,14 @@
   }
 }
 
+.feedback-form__field--phone {
+  margin-bottom: 10px;
+}
+
+.feedback-form__field--email .feedback-form__label-wrapper {
+  margin-bottom: 5px;
+}
+
 .feedback-form__input-contacts-wrapper {
   display: flex;
 
@@ -215,8 +227,8 @@
 
 .feedback-form__impression-wrapper {
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding-top: 21px;
+  padding-bottom: 13px;
 
   @media (max-width: $mobile-width) {
     &::before {
@@ -257,16 +269,19 @@
   & .feedback-form__label {
     display: flex;
     align-items: center;
-    margin-bottom: 13px;
+    margin-bottom: 14px;
   }
 
   & .feedback-form__radio-value {
-    margin-left: 20px;
+    margin-left: 23px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: none;
   }
 }
 
 .feedback-form__impression-legend {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -316,8 +331,8 @@
 
 .feedback-form__sightseeing-wrapper {
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding-top: 16px;
+  padding-bottom: 1px;
 
   @media (max-width: $mobile-width) {
     &::before {
@@ -348,7 +363,7 @@
   & .feedback-form__label {
     display: flex;
     align-items: center;
-    margin-bottom: 13px;
+    margin-bottom: 24px;
 
     @media (min-width: $tablet-width) and (max-width: 1279px) {
       &:nth-of-type(odd) {
@@ -362,7 +377,10 @@
   }
 
   & .feedback-form__checkbox-value {
-    margin-left: 20px;
+    margin-left: 23px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: none;
   }
 
   @media (min-width: $tablet-width) {
@@ -382,7 +400,7 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -485,8 +503,8 @@
 
 .feedback-form__emotion-wrapper {
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-top: 21px;
+  padding-bottom: 45px;
 
   @media (max-width: $mobile-width) {
     &::before {
@@ -519,6 +537,7 @@
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 15px;
+  padding: 0 10px 0 12px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -579,10 +598,11 @@
 }
 
 .feedback-form__textarea-input {
-  padding: 13px 22px 29px;
+  padding: 13px 20px 29px;
   margin: 0;
   box-sizing: border-box;
   width: 100%;
+  height: 160px;
   font-family: $main-font;
   font-size: 18px;
   line-height: 26px;

@@ -1,15 +1,10 @@
 html {
   height: 100%;
-  //width: 100vw;
-  //overflow-x: hidden;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  //width: 320px;
-
-  min-height: 100%;
   margin: 0 auto;
   font-family: $main-font;
   font-style: normal;
@@ -21,9 +16,10 @@ body {
 }
 
 .page-container {
+  display: flex;
+  flex-direction: column;
   width: 320px;
   margin: 0 auto;
-  flex-grow: 1;
   background-color: $white;
   box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
   @media (min-width: $tablet-width) {
@@ -33,6 +29,10 @@ body {
   @media (min-width: $desktop-width) {
     width: 1200px;
   }
+}
+
+.index-main {
+  flex-grow: 1;
 }
 
 .visually-hidden {
