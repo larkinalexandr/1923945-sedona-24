@@ -80,6 +80,11 @@
   display: inline-block;
   padding-left: 2px;
   margin-bottom: 8px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
 }
 
 .feedback-form__label {
@@ -228,7 +233,7 @@
 .feedback-form__field--phone .feedback-form__label-wrapper {
 
   @media (min-width: $desktop-width) {
-    margin-right: 14px;
+    margin-right: 16px;
   }
 }
 
@@ -240,7 +245,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 17px;
+    margin-right: 19px;
   }
 }
 
