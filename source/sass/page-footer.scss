@@ -45,7 +45,6 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
     margin-right: 7px;
-
   }
 }
 
@@ -76,11 +75,11 @@
 
   &:active {
     background-color: #5496bd;
-
-    & .social__link-icon {
-      opacity: 0.3;
-    }
   }
+}
+
+.page-footer__social-link:active .social__link-icon {
+  opacity: 0.3;
 }
 
 .social__link-icon {

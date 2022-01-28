@@ -231,7 +231,6 @@
 }
 
 .guest-gallery__item:first-child .guest-gallery__likes {
-
   @media (min-width: $tablet-width) {
     margin-bottom: 6px;
     margin-left: 9px;
@@ -246,7 +245,7 @@
 }
 
 .guest-gallery__item:not(:first-child):nth-child(odd) .guest-gallery__description-wrapper {
-  @media (min-width: $tablet-width) and (max-width: 1279px){
+  @media (min-width: $tablet-width) and (max-width: 1279px) {
     background-color: #eaeaea;
   }
 }

@@ -131,7 +131,7 @@
     width: 238px;
 
     &:nth-child(4n-3) {
-      margin-left: 0px;
+      margin-left: 0;
     }
 
     &:nth-child(4n-2) {
@@ -143,7 +143,7 @@
 
 .main-nav__link {
   display: block;
-  padding-top: 5px;
+  padding-top: 8px;
   padding-bottom: 5px;
   color: $white;
   font-size: 18px;
