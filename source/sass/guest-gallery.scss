@@ -245,7 +245,7 @@
 }
 
 .guest-gallery__item:not(:first-child):nth-child(odd) .guest-gallery__description-wrapper {
-  @media (min-width: $tablet-width) and (max-width: 1279px) {
+  @media (min-width: $tablet-width) and (max-width: 1199px) {
     background-color: #eaeaea;
   }
 }
