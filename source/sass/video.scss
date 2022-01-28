@@ -1,17 +1,22 @@
 .video {
   padding-top: 32px;
+  padding-bottom: 45px;
 }
 
 .video__title {
-  padding: 0 20px 33px;
   margin: 0;
+  padding: 0 20px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
   text-align: center;
   text-transform: uppercase;
 }
 
 .video__description {
   margin: 0;
-  padding: 0 20px 33px;
+  padding: 0 25px 33px;
+  line-height: 24px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -44,7 +49,7 @@
   background-color: $black;
   height: 45px;
   left: 20px;
-  bottom: 66px;
+  bottom: 65px;
   right: 20px;
   opacity: 0.6;
 
@@ -77,11 +82,13 @@
 
 .video__control-toggle {
   position: absolute;
-  left: 37px;
-  top: 18px;
+  left: 57px;
+  top: 19px;
   display: block;
   width: 9px;
   height: 9px;
+  margin: 0;
+  padding: 0;
   background-color: $white;
   border: none;
   border-radius: 50%;
@@ -100,7 +107,7 @@
   cursor: pointer;
 
   &--replay {
-    margin-left: 25px;
+    margin-left: 38px;
 
     @media (min-width: $tablet-width) {
       order: 1;
@@ -109,7 +116,7 @@
 
   &--subtitles {
     margin-left: auto;
-    margin-right: 31px;
+    margin-right: 19px;
 
     @media (min-width: $tablet-width) {
       order: 3;
@@ -117,7 +124,7 @@
   }
 
   &--fullscreen {
-    margin-right: 23px;
+    margin-right: 38px;
 
     @media (min-width: $tablet-width) {
       order: 4;
