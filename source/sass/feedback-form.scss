@@ -297,8 +297,8 @@
       content: "";
       position: absolute;
       display: block;
-      top: 25px;
-      bottom: 30px;
+      top: 62px;
+      bottom: 36px;
       right: 0;
       width: 1px;
       background-color: #dbdbdb;
@@ -307,6 +307,10 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 41px;
+
+    &::after {
+      top: 44px;
+    }
   }
 }
 
@@ -670,7 +674,7 @@
       content: "";
       position: absolute;
       display: block;
-      top: 50%;
+      top: 33%;
       left: 0;
       height: 1px;
       width: 280px;
@@ -681,7 +685,7 @@
       content: "";
       position: absolute;
       display: block;
-      top: 50%;
+      top: 33%;
       right: 0;
       height: 1px;
       width: 280px;

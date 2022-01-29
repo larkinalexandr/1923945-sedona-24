@@ -72,7 +72,7 @@
 
 .guest-gallery__item {
   position: relative;
-  margin-top: 22px;
+  padding-top: 22px;
   padding-bottom: 15px;
 
   @media (max-width: $mobile-width) {
@@ -80,8 +80,8 @@
       content: "";
       position: absolute;
       top: 0;
-      right: 0;
-      left: 0;
+      right: -20px;
+      left: -20px;
       display: block;
       height: 1px;
       background-color: #e5e5e5;
@@ -90,9 +90,9 @@
     &:last-child::after {
       content: "";
       position: absolute;
-      right: 0;
+      right: -20px;
       bottom: 0;
-      left: 0;
+      left: -20px;
       display: block;
       height: 1px;
       background-color: #e5e5e5;
