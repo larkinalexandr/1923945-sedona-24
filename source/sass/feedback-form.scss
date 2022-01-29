@@ -81,11 +81,11 @@
 .feedback-form__label {
   line-height: 26px;
   text-transform: uppercase;
+}
 
-  &--hide {
-    @media (min-width: $desktop-width) {
-      display: none;
-    }
+.feedback-form__label-contact--hide {
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
@@ -475,7 +475,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 28;
+    margin-left: 28px;
   }
 }
 
