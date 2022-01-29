@@ -19,6 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 320px;
+  min-height: 100vh;
   margin: 0 auto;
   background-color: $white;
   box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
