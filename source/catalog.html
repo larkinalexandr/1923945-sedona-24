@@ -3,14 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="/fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
   <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <title>HTML Academy: Седона - Галерея</title>
 </head>
 <body class="page__body">
+<div class="page-container">
 <header class="page-header">
-  <a class="page-header__logo-link" href="#">
+  <a class="page-header__logo-link" href="index.html">
     <picture>
       <source media="(min-width: 1280px)" srcset="img/logotype-desktop.svg">
       <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
@@ -56,7 +59,7 @@
   <section class="guest-gallery">
     <div class="guest-gallery__header-wrapper">
       <h1 class="guest-gallery__title">Фото и видео</h1>
-      <p class="guest-gallery__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть
+      <p class="guest-gallery__description">Не можете решиться на путешествие из-за курса?<br> Фотографии помогут вам забыть
         о политике и экономике.</p>
     </div>
     <ul class="guest-gallery__list">
@@ -180,7 +183,7 @@
   </section>
   <section class="video">
     <h2 class="video__title">Все еще сомневаетесь?</h2>
-    <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
+    <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они<br> не подорожали в очередной
       раз!</p>
     <div class="video__content">
       <picture>
@@ -254,22 +257,7 @@
     </a>
   </div>
 </footer>
-<script>
-  let navMain = document.querySelector('.main-nav');
-  let navToggle = document.querySelector('.main-nav__toggle');
-
-  navMain.classList.remove('main-nav--nojs');
-
-
-  navToggle.addEventListener('click', function() {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
-</script>
+  <script src="js/script.min.js"></script>
+</div>
 </body>
 </html>

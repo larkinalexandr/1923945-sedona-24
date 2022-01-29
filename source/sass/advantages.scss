@@ -20,11 +20,11 @@
   background-color: #81b3d2;
 
   @media (min-width: $tablet-width) {
-    padding: 40px 25px 5px;
+    padding: 40px 30px 5px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 50px 60px 5px;
+    padding: 47px 60px 5px;
   }
 }
 
@@ -35,6 +35,14 @@
 .advantages__item--large:not(:first-of-type) .advantages__item-content {
   padding-top: 39px;
   padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 52px;
+  }
 }
 
 .advantages__item-content .advantages__title {
@@ -45,8 +53,19 @@
   color: $white;
   text-transform: uppercase;
 
+  @media (min-width: $tablet-width) {
+    margin: 0 0 13px;
+    font-size: 21px;
+  }
+
   @media (min-width: $desktop-width) {
     padding: 0 35px;
+  }
+}
+
+.advantages__title br {
+  @media (max-width: $mobile-width) {
+    display: none;
   }
 }
 
@@ -55,6 +74,14 @@
   margin-bottom: 18px;
   color: $white;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .advantages__item-content .advantages__description {
@@ -62,6 +89,14 @@
   padding-bottom: 10px;
   color: $white;
   text-transform: uppercase;
+}
+
+.advantages__description--bridge br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
 }
 
 .advantages__image-wrapper {
@@ -94,6 +129,7 @@
   @media (max-width: $mobile-width) {
 
     text-align: left;
+    padding-right: 20px;
     padding-left: 70px;
 
     &:nth-child(1) {
@@ -110,8 +146,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 120px 35px 59px;
+    padding: 157px 32px 56px;
     text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 77px;
   }
 
   &--housing-item {
@@ -120,7 +160,8 @@
 
     @media (min-width: $tablet-width) {
       order: 1;
-      background-position: 50% 40px;
+      background-position: 50% 60px;
+      background-size: 75px;
     }
   }
 
@@ -130,7 +171,8 @@
 
     @media (min-width: $tablet-width) {
       order: 3;
-      background-position: 50% 40px;
+      background-position: 50% 57px;
+      background-size: 64px;
     }
   }
 
@@ -140,8 +182,43 @@
 
     @media (min-width: $tablet-width) {
       order: 2;
-      background-position: 50% 40px;
+      background-position: 50% 64px;
+      background-size: 76px;
     }
+  }
+}
+
+.advantages__sub-item--housing-item br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}
+
+.advantages__sub-item--souvenirs-item br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}
+
+.advantages__sub-description br {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.advantages__sub-description-wrap--road {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.advantages__sub-description-wrap--tourists {
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
@@ -151,12 +228,22 @@
   line-height: 26px;
   font-weight: bold;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 23px;
+    font-size: 21px;
+  }
+}
+
+.advantages__sub-title br {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }
 
 .advantages__sub-description {
   margin: 0;
   text-transform: uppercase;
-  padding-right: 20px;
   padding-bottom: 5px;
 }
 
@@ -165,13 +252,22 @@
   background-color: #eeeeee;
   text-align: center;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 42px;
+    padding-bottom: 37px;
+  }
+
   @media (min-width: $desktop-width) {
-    padding: 43px 65px 50px;
+    padding: 43px 65px 57px;
   }
 }
 
 .advantages__sub-item-wrapper:last-child .advantages__sub-item:first-child {
-  padding: 25px 40px 20px;
+  padding: 25px 39px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 42px;
+  }
 
   @media (min-width: $desktop-width) {
     padding: 43px 55px 50px;
@@ -199,6 +295,10 @@
   margin-bottom: 10px;
   padding: 0 10px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 13px;
+  }
+
   @media (min-width: $desktop-width) {
     padding: 0 78px;
   }
@@ -207,6 +307,10 @@
 .advantages__sub-item-wrapper:last-child .advantages__sub-number {
   display: block;
   margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+  }
 }
 
 

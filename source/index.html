@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="/fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
   <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
@@ -81,23 +83,23 @@
         <ul class="advantages__sub-list">
           <li class="advantages__sub-item advantages__sub-item--housing-item">
             <h3 class="advantages__sub-title">Жилье</h3>
-            <p class="advantages__sub-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            <p class="advantages__sub-description">Рекомендуем пожить в настоящем<br> мотеле, все как в кино!</p>
           </li>
           <li class="advantages__sub-item advantages__sub-item--souvenirs-item">
             <h3 class="advantages__sub-title">Сувениры</h3>
-            <p class="advantages__sub-description">Не только китайского, но и местного производства!</p>
+            <p class="advantages__sub-description">Не только китайского,<br> но и местного производства!</p>
           </li>
           <li class="advantages__sub-item advantages__sub-item--eat-item">
             <h3 class="advantages__sub-title">Еда</h3>
-            <p class="advantages__sub-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            <p class="advantages__sub-description">Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
           </li>
         </ul>
       </li>
       <li class="advantages__item advantages__item--large">
         <div class="advantages__item-content">
-          <h3 class="advantages__title">Там есть мост дьявола</h3>
+          <h3 class="advantages__title">Там есть<br> мост дьявола</h3>
           <span class="advantages__number">— №2 —</span>
-          <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+          <p class="advantages__description advantages__description--bridge">Да, по нему можно пройти!<br> Если вы осмелитесь, конечно</p>
         </div>
         <p class="advantages__image-wrapper">
           <picture>
@@ -120,12 +122,12 @@
           <li class="advantages__sub-item">
             <h3 class="advantages__sub-title">Красивая дорога</h3>
             <span class="advantages__sub-number">— №4 —</span>
-            <p class="advantages__sub-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p class="advantages__sub-description">Ехать в Седону из<br class="advantages__sub-description-wrap--road"> Лас-Вегаса совсем <br>не скучно!</p>
           </li>
           <li class="advantages__sub-item">
-            <h3 class="advantages__sub-title">Мало туристов</h3>
+            <h3 class="advantages__sub-title">Мало<br> туристов</h3>
             <span class="advantages__sub-number">— №5 —</span>
-            <p class="advantages__sub-description">Большинство едет в гранд каньон и толпится там</p>
+            <p class="advantages__sub-description">Большинство едет в<br class="advantages__sub-description-wrap--tourists"> гранд каньон и<br> толпится там</p>
           </li>
         </ul>
       </li>
@@ -133,7 +135,7 @@
   </section>
   <section class="search-hotel-index">
     <h2 class="search-hotel-index__title">Заинтересовались?</h2>
-    <p class="search-hotel-index__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
+    <p class="search-hotel-index__description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения
       гостиниц в седоне</p>
     <a class="search-hotel-index__button button">найти гостиницу</a>
   </section>
@@ -183,22 +185,7 @@
     </a>
   </div>
 </footer>
-<script>
-  let navMain = document.querySelector('.main-nav');
-  let navToggle = document.querySelector('.main-nav__toggle');
-
-  navMain.classList.remove('main-nav--nojs');
-
-  navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
-</script>
+  <script src="js/script.min.js"></script>
 </div>
 </body>
 </html>

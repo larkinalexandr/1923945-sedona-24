@@ -1,10 +1,12 @@
 .inner-welcome {
   position: relative;
   padding-top: 52px;
-  min-height: 106px;
+  min-height: 107px;
+  background-color: #be9658;
   background-image: url("../img/background/back-inner-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 0 -56px;
+  background-size: 100%;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/background/back-inner-mobile@2x.jpg");
@@ -38,7 +40,7 @@
       bottom: 0;
       left: 0;
       display: block;
-      height: 57px;
+      height: 56px;
       background-image: url("../img/intro-triangle-tablet.svg");
       background-repeat: no-repeat;
     }
@@ -49,8 +51,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 94px;
-    min-height: 207px;
+    padding-top: 101px;
+    min-height: 200px;
     background-image: url("../img/background/back-inner-desktop@1x.jpg");
     background-position: 0 -56px;
 

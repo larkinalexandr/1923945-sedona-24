@@ -11,23 +11,47 @@
 }
 
 .guest-gallery__header-wrapper {
-  padding: 24px 20px 20px;
+  padding: 31px 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 63px 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+  }
 }
 
 .guest-gallery__title {
-  margin: 0 0 25px;
+  margin: 0 0 29px;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
   text-align: center;
   color: $black;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 33px;
+    font-size: 30px;
+  }
 }
 
 .guest-gallery__description {
   margin: 0;
+  line-height: 24px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 102px;
+  }
+}
+
+.guest-gallery__description br {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }
 
 .guest-gallery__list {
@@ -38,6 +62,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 26px;
   }
 
   @media (min-width: $desktop-width) {
@@ -47,14 +72,16 @@
 
 .guest-gallery__item {
   position: relative;
+  padding-top: 22px;
+  padding-bottom: 15px;
 
   @media (max-width: $mobile-width) {
     &::before {
       content: "";
       position: absolute;
       top: 0;
-      right: 0;
-      left: 0;
+      right: -20px;
+      left: -20px;
       display: block;
       height: 1px;
       background-color: #e5e5e5;
@@ -63,9 +90,9 @@
     &:last-child::after {
       content: "";
       position: absolute;
-      right: 0;
+      right: -20px;
       bottom: 0;
-      left: 0;
+      left: -20px;
       display: block;
       height: 1px;
       background-color: #e5e5e5;
@@ -73,14 +100,20 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+
     &:first-child {
       grid-column: span 2;
+      margin-top: 22px;
     }
   }
 
   @media (min-width: $desktop-width) {
     &:first-child {
       grid-column: span 3;
+      margin-top: 24px;
     }
   }
 }
@@ -92,12 +125,19 @@
 
 .guest-gallery__image {
   display: block;
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .guest-gallery__description-wrapper {
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 7px;
     align-items: center;
     background-color: #f2f2f2;
   }
@@ -119,7 +159,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    padding-left: 15px;
+    padding-left: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -134,7 +174,7 @@
   line-height: 24px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 15px;
+    padding-left: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -142,13 +182,23 @@
   }
 }
 
+.guest-gallery__likes-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .guest-gallery__likes-button {
   width: 23px;
   height: 21px;
+  padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 11px;
     margin-left: auto;
   }
 }
@@ -164,15 +214,38 @@
 }
 
 .guest-gallery__likes {
-  margin-left: 30px;
+  margin-left: 10px;
   font-weight: bold;
   line-height: 24px;
 
   @media (min-width: $tablet-width) {
-    padding-right: 15px;
+    min-width: 23px;
+    margin-bottom: 6px;
+    margin-left: 9px;
+    padding-right: 29px;
   }
 
   @media (min-width: $desktop-width) {
     color: $white;
+  }
+}
+
+.guest-gallery__item:first-child .guest-gallery__likes {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 6px;
+    margin-left: 9px;
+    padding-right: 20px;
+  }
+}
+
+.guest-gallery__item:first-child .guest-gallery__likes-button {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 11px;
+  }
+}
+
+.guest-gallery__item:not(:first-child):nth-child(odd) .guest-gallery__description-wrapper {
+  @media (min-width: $tablet-width) and (max-width: 1199px) {
+    background-color: #eaeaea;
   }
 }

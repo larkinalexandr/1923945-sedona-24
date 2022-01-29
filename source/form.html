@@ -3,14 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="/fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
   <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <title>HTML Academy: Седона - Форма обратной связи</title>
 </head>
 <body class="page__body">
+<div class="page-container">
 <header class="page-header">
-  <a class="page-header__logo-link" href="#">
+  <a class="page-header__logo-link" href="index.html">
     <picture>
       <source media="(min-width: 1280px)" srcset="img/logotype-desktop.svg">
       <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
@@ -60,30 +63,32 @@
   <form class="feedback-form" action="https://echo.htmlacademy.ru" method="get">
     <div class="feedback-form__introduce-wrapper">
       <h2 class="feedback-form__title">Представьтесь:</h2>
-      <p class="feedback-form__field">
+      <p class="feedback-form__field feedback-form__field--introduce">
         <label class="feedback-form__label" for="name">Имя<sup class="feedback-form__label-notes">*</sup>:</label>
         <input class="feedback-form__input-name input" type="text" name="name" id="name" placeholder="Петр" required>
       </p>
-      <p class="feedback-form__field">
+      <p class="feedback-form__field feedback-form__field--introduce">
         <label class="feedback-form__label" for="surname">Фамилия<sup class="feedback-form__label-notes">*</sup>:</label>
         <input class="feedback-form__input-surname input" type="text" name="surname" id="surname" placeholder="Иванов" required>
       </p>
-      <p class="feedback-form__field">
+      <p class="feedback-form__field feedback-form__field--introduce">
         <label class="feedback-form__label" for="patronymic">Отчество:</label>
         <input class="feedback-form__input-patronymic input" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
       </p>
     </div>
     <div class="feedback-form__contacts-wrapper">
       <h2 class="feedback-form__title">Контактная информация:</h2>
-      <div class="feedback-form__field">
-        <label class="feedback-form__label" for="phone"><span class="feedback-form__label--hide">Контактный </span>телефон<sup class="feedback-form__label-notes">*</sup>:
+      <div class="feedback-form__field feedback-form__field--phone">
+        <label class="feedback-form__label" for="phone">
+          <span class="feedback-form__label-wrapper"><span class="feedback-form__label-contact feedback-form__label-contact--hide">Контактный </span>телефон<sup class="feedback-form__label-notes">*</sup>:</span>
         <span class="feedback-form__input-contacts-wrapper feedback-form__input-contacts-wrapper--phone">
           <input class="feedback-form__input-phone input" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
         </span>
         </label>
       </div>
-      <div class="feedback-form__field">
-        <label class="feedback-form__label" for="email">Электронная почта<sup class="feedback-form__label-notes">*</sup>:
+      <div class="feedback-form__field feedback-form__field--email">
+        <label class="feedback-form__label" for="email">
+          <span class="feedback-form__label-wrapper">Электронная почта<sup class="feedback-form__label-notes">*</sup>:</span>
         <span class="feedback-form__input-contacts-wrapper feedback-form__input-contacts-wrapper--email">
           <input class="feedback-form__input-email input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
         </span>
@@ -139,7 +144,7 @@
       <fieldset class="feedback-form__emotion-fieldset">
         <legend class="feedback-form__emotion-legend">Опишите свои эмоции:</legend>
         <label class="feedback-form__label visually-hidden" for="emotion">Опишите свои эмоции.</label>
-        <textarea class="feedback-form__textarea-input" name="emotion" id="emotion" rows="6" placeholder="Опишите подробно все свои восторги"></textarea>
+        <textarea class="feedback-form__textarea-input" name="emotion" id="emotion" rows="4" placeholder="Опишите подробно все свои восторги"></textarea>
       </fieldset>
     </div>
     <button class="feedback-form__button button" type="submit">отправить отзыв</button>
@@ -186,34 +191,19 @@
     </a>
   </div>
 </footer>
-<div class="feedback-modal-error modal">
+<div class="feedback-modal-error">
   <h3 class="feedback-modal-error__title">Что-то пошло не так!</h3>
   <p class="feedback-modal-error__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
   <button class="feedback-modal-error__button button" type="button">Ok</button>
 </div>
-<div class="feedback-modal-ok modal">
+<div class="feedback-modal-ok">
   <h3 class="feedback-modal-ok__title">Ваш отзыв отправлен!</h3>
   <p class="feedback-modal-ok__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее время мы опубликуем его на сайте.</p>
   <div class="feedback-modal-ok__button-wrapper">
     <button class="feedback-modal-ok__button button" type="button">Закрыть окно</button>
   </div>
 </div>
-<script>
-  let navMain = document.querySelector('.main-nav');
-  let navToggle = document.querySelector('.main-nav__toggle');
-
-  navMain.classList.remove('main-nav--nojs');
-
-  navToggle.addEventListener('click', function() {
-
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
-</script>
+  <script src="js/script.min.js"></script>
+</div>
 </body>
 </html>
