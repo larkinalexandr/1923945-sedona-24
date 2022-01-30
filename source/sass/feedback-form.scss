@@ -402,6 +402,11 @@
   opacity: 0.3;
 }
 
+.feedback-form__radio-input:focus-visible + .feedback-form__radio-check {
+  outline: 2px solid $focus-color;
+  outline-offset: -2px;
+}
+
 /*sightseeing-fields*/
 
 .feedback-form__sightseeing-wrapper {
@@ -587,6 +592,11 @@
   opacity: 0.3;
 }
 
+.feedback-form__checkbox:focus-visible + .feedback-form__checkbox-check {
+  outline: 2px solid $focus-color;
+  outline-offset: -2px;
+}
+
 /*emotion-field*/
 
 .feedback-form__emotion-wrapper {
@@ -724,6 +734,8 @@
 
   &:focus {
     background: $white;
+    outline: 4px solid #e5e5e5;
+    outline-offset: -4px;
   }
 
   @media (min-width: $tablet-width) {

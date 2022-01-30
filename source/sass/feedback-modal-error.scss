@@ -1,5 +1,9 @@
-.feedback-modal-error {
+.feedback-modal-error.feedback-modal-error--hide {
   display: none;
+}
+
+.feedback-modal-error {
+  display: block;
   position: fixed;
   left: 50%;
   top: 50%;
