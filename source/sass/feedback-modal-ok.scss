@@ -1,5 +1,9 @@
-.feedback-modal-ok {
+.feedback-modal-ok.feedback-modal-ok--hide {
   display: none;
+}
+
+.feedback-modal-ok {
+  display: block;
   position: fixed;
   left: 50%;
   top: 50%;

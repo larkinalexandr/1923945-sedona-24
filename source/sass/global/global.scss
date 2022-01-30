@@ -61,6 +61,7 @@ body {
   border: none;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
 
   &:hover {
@@ -74,6 +75,11 @@ body {
 
   &:disabled {
     background-color: #e5e5e5;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $focus-color;
+    outline-offset: -2px;
   }
 }
 

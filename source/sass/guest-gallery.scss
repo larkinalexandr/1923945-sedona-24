@@ -132,6 +132,13 @@
   }
 }
 
+.guest-gallery__image-link {
+  &:focus-visible {
+    outline: 2px solid $focus-color;
+    outline-offset: -2px;
+  }
+}
+
 .guest-gallery__description-wrapper {
   @media (min-width: $tablet-width) {
     display: flex;
@@ -196,6 +203,11 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid $focus-color;
+    outline-offset: 2px;
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 11px;
