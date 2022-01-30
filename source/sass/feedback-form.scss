@@ -734,6 +734,8 @@
 
   &:focus {
     background: $white;
+    outline: 4px solid #e5e5e5;
+    outline-offset: -4px;
   }
 
   @media (min-width: $tablet-width) {
