@@ -1,8 +1,14 @@
 @import "global/variables.scss";
 @import "global/fonts.scss";
 @import "global/global.scss";
+@import "blocks/input.scss";
+@import "blocks/button.scss";
+@import "blocks/page-container.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
+@import "blocks/index-main.scss";
+@import "blocks/feedback-main.scss";
+@import "blocks/gallery-main.scss";
 @import "blocks/index-welcome.scss";
 @import "blocks/index-greeting.scss";
 @import "blocks/advantages.scss";
@@ -12,9 +18,9 @@
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
 @import "blocks/inner-welcome.scss";
-@import "blocks/feedback-content";
+@import "blocks/feedback-content.scss";
 @import "blocks/feedback-form.scss";
 @import "blocks/feedback-modal-ok.scss";
 @import "blocks/feedback-modal-error.scss";
-@import "blocks/guest-gallery";
+@import "blocks/guest-gallery.scss";
 @import "blocks/video.scss";
