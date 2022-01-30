@@ -19,6 +19,20 @@
   }
 }
 
+.main-nav__toggle:focus-visible .main-nav__toggle-burger {
+  outline: 2px solid $focus-color;
+  outline-offset: 2px;
+}
+
+.main-nav__toggle:focus-visible .main-nav__toggle-cross {
+  outline: 2px solid $focus-color;
+  outline-offset: 2px;
+}
+
+.main-nav__toggle:focus-visible {
+  outline: none;
+}
+
 .main-nav--closed .main-nav__toggle-burger {
   display: block;
   fill: #81b3d2;
@@ -155,6 +169,11 @@
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $focus-color;
+    outline-offset: -2px;
   }
 
   @media (min-width: $tablet-width) {

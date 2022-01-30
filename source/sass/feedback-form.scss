@@ -402,6 +402,11 @@
   opacity: 0.3;
 }
 
+.feedback-form__radio-input:focus-visible + .feedback-form__radio-check {
+  outline: 2px solid $focus-color;
+  outline-offset: -2px;
+}
+
 /*sightseeing-fields*/
 
 .feedback-form__sightseeing-wrapper {
@@ -585,6 +590,11 @@
 
 .feedback-form__checkbox:checked:active + .feedback-form__checkbox-check {
   opacity: 0.3;
+}
+
+.feedback-form__checkbox:focus-visible + .feedback-form__checkbox-check {
+  outline: 2px solid $focus-color;
+  outline-offset: -2px;
 }
 
 /*emotion-field*/
