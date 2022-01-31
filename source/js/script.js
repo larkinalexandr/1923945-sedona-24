@@ -3,7 +3,7 @@ let navToggle = document.querySelector('.main-nav__toggle');
 let mapImage = document.querySelector('.map__image');
 
 if (mapImage) {
-  mapImage.classList.remove('map__image--nojs')
+  mapImage.classList.remove('map__image--nojs');
 }
 
 navMain.classList.remove('main-nav--nojs');
